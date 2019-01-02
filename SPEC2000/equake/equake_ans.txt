@@ -1,0 +1,286 @@
+
+
+L1 inst cache 8KB, n sets: 256
+
+sim_IPC                      1.3909 # instructions per cycle
+sim_total_loads            28293450 # total number of loads executed
+sim_total_stores       8723743.0000 # total number of stores executed
+il1.miss_rate                0.0469 # miss rate (i.e., misses/ref)
+dl1.miss_rate                0.0431 # miss rate (i.e., misses/ref)
+dl1.wb_rate                  0.0127 # writeback rate (i.e., wrbks/ref)
+ul2.miss_rate                0.0010 # miss rate (i.e., misses/ref)
+ul2.wb_rate                  0.0004 # writeback rate (i.e., wrbks/ref)
+sim_cycle                  71894852 # total simulation time in cycles
+
+
+L1 inst cache 32KB, n sets: 1024
+
+sim_IPC                      1.3909 # instructions per cycle
+sim_total_loads            28293450 # total number of loads executed
+sim_total_stores       8723743.0000 # total number of stores executed
+il1.miss_rate                0.0469 # miss rate (i.e., misses/ref)
+dl1.miss_rate                0.0431 # miss rate (i.e., misses/ref)
+dl1.wb_rate                  0.0127 # writeback rate (i.e., wrbks/ref)
+ul2.miss_rate                0.0010 # miss rate (i.e., misses/ref)
+ul2.wb_rate                  0.0004 # writeback rate (i.e., wrbks/ref)
+sim_cycle                  71894852 # total simulation time in cycles
+
+
+L1 inst cache 32KB, n sets: 1024
+
+sim_IPC                      1.8457 # instructions per cycle
+sim_total_loads            28513918 # total number of loads executed
+sim_total_stores       8784863.0000 # total number of stores executed
+il1.miss_rate                0.0134 # miss rate (i.e., misses/ref)
+dl1.miss_rate                0.0433 # miss rate (i.e., misses/ref)
+dl1.wb_rate                  0.0127 # writeback rate (i.e., wrbks/ref)
+ul2.miss_rate                0.0020 # miss rate (i.e., misses/ref)
+ul2.wb_rate                  0.0007 # writeback rate (i.e., wrbks/ref)
+sim_cycle                  54181327 # total simulation time in cycles
+
+
+L1 inst cache 64KB, n sets: 2048
+
+sim_IPC                      2.0517 # instructions per cycle
+sim_total_loads            28560402 # total number of loads executed
+sim_total_stores       8778215.0000 # total number of stores executed
+il1.miss_rate                0.0020 # miss rate (i.e., misses/ref)
+dl1.miss_rate                0.0435 # miss rate (i.e., misses/ref)
+dl1.wb_rate                  0.0128 # writeback rate (i.e., wrbks/ref)
+ul2.miss_rate                0.0032 # miss rate (i.e., misses/ref)
+ul2.wb_rate                  0.0011 # writeback rate (i.e., wrbks/ref)
+sim_cycle                  48741037 # total simulation time in cycles
+
+
+L1 data cache 2KB, way: 4, n sets: 16
+
+sim_IPC                      1.6858 # instructions per cycle
+sim_total_loads            28374785 # total number of loads executed
+sim_total_stores       8746459.0000 # total number of stores executed
+il1.miss_rate                0.0228 # miss rate (i.e., misses/ref)
+dl1.miss_rate                0.0580 # miss rate (i.e., misses/ref)
+dl1.wb_rate                  0.0136 # writeback rate (i.e., wrbks/ref)
+ul2.miss_rate                0.0014 # miss rate (i.e., misses/ref)
+ul2.wb_rate                  0.0005 # writeback rate (i.e., wrbks/ref)
+sim_cycle                  59320726 # total simulation time in cycles
+
+
+L1 data cache 32KB, way: 4, n sets: 256
+
+sim_IPC                      1.8003 # instructions per cycle
+sim_total_loads            28361396 # total number of loads executed
+sim_total_stores       8746362.0000 # total number of stores executed
+il1.miss_rate                0.0227 # miss rate (i.e., misses/ref)
+dl1.miss_rate                0.0004 # miss rate (i.e., misses/ref)
+dl1.wb_rate                  0.0003 # writeback rate (i.e., wrbks/ref)
+ul2.miss_rate                0.0028 # miss rate (i.e., misses/ref)
+ul2.wb_rate                  0.0010 # writeback rate (i.e., wrbks/ref)
+sim_cycle                  55546864 # total simulation time in cycles
+
+
+L1 data cache 128KB, way: 4, n sets: 1024
+
+sim_IPC                      1.8003 # instructions per cycle
+sim_total_loads            28361397 # total number of loads executed
+sim_total_stores       8746362.0000 # total number of stores executed
+il1.miss_rate                0.0227 # miss rate (i.e., misses/ref)
+dl1.miss_rate                0.0004 # miss rate (i.e., misses/ref)
+dl1.wb_rate                  0.0002 # writeback rate (i.e., wrbks/ref)
+ul2.miss_rate                0.0029 # miss rate (i.e., misses/ref)
+ul2.wb_rate                  0.0007 # writeback rate (i.e., wrbks/ref)
+sim_cycle                  55544886 # total simulation time in cycles
+
+
+L1 data cache 32KB, way: 1, n sets: 1024
+
+sim_IPC                      1.7977 # instructions per cycle
+sim_total_loads            28361268 # total number of loads executed
+sim_total_stores       8746301.0000 # total number of stores executed
+il1.miss_rate                0.0227 # miss rate (i.e., misses/ref)
+dl1.miss_rate                0.0015 # miss rate (i.e., misses/ref)
+dl1.wb_rate                  0.0007 # writeback rate (i.e., wrbks/ref)
+ul2.miss_rate                0.0028 # miss rate (i.e., misses/ref)
+ul2.wb_rate                  0.0010 # writeback rate (i.e., wrbks/ref)
+sim_cycle                  55627064 # total simulation time in cycles
+
+
+L1 data cache 32KB, way: 2, n sets: 512
+
+sim_IPC                      1.8001 # instructions per cycle
+sim_total_loads            28361377 # total number of loads executed
+sim_total_stores       8746362.0000 # total number of stores executed
+il1.miss_rate                0.0227 # miss rate (i.e., misses/ref)
+dl1.miss_rate                0.0005 # miss rate (i.e., misses/ref)
+dl1.wb_rate                  0.0003 # writeback rate (i.e., wrbks/ref)
+ul2.miss_rate                0.0028 # miss rate (i.e., misses/ref)
+ul2.wb_rate                  0.0010 # writeback rate (i.e., wrbks/ref)
+sim_cycle                  55553264 # total simulation time in cycles
+
+
+L1 data cache 32KB, way: 8, n sets: 128
+
+sim_IPC                      1.8003 # instructions per cycle
+sim_total_loads            28361396 # total number of loads executed
+sim_total_stores       8746362.0000 # total number of stores executed
+il1.miss_rate                0.0227 # miss rate (i.e., misses/ref)
+dl1.miss_rate                0.0004 # miss rate (i.e., misses/ref)
+dl1.wb_rate                  0.0003 # writeback rate (i.e., wrbks/ref)
+ul2.miss_rate                0.0028 # miss rate (i.e., misses/ref)
+ul2.wb_rate                  0.0009 # writeback rate (i.e., wrbks/ref)
+sim_cycle                  55545816 # total simulation time in cycles
+
+
+L2 data cache 128KB, n sets: 512
+
+sim_IPC                      1.6974 # instructions per cycle
+sim_total_loads            28395259 # total number of loads executed
+sim_total_stores       8746109.0000 # total number of stores executed
+il1.miss_rate                0.0227 # miss rate (i.e., misses/ref)
+dl1.miss_rate                0.0433 # miss rate (i.e., misses/ref)
+dl1.wb_rate                  0.0127 # writeback rate (i.e., wrbks/ref)
+ul2.miss_rate                0.0016 # miss rate (i.e., misses/ref)
+ul2.wb_rate                  0.0009 # writeback rate (i.e., wrbks/ref)
+sim_cycle                  58914174 # total simulation time in cycles
+
+
+L2 data cache 512KB, n sets: 2048
+
+sim_IPC                      1.6974 # instructions per cycle
+sim_total_loads            28395259 # total number of loads executed
+sim_total_stores       8746109.0000 # total number of stores executed
+il1.miss_rate                0.0227 # miss rate (i.e., misses/ref)
+dl1.miss_rate                0.0433 # miss rate (i.e., misses/ref)
+dl1.wb_rate                  0.0127 # writeback rate (i.e., wrbks/ref)
+ul2.miss_rate                0.0016 # miss rate (i.e., misses/ref)
+ul2.wb_rate                  0.0000 # writeback rate (i.e., wrbks/ref)
+sim_cycle                  58914084 # total simulation time in cycles
+
+
+L2 data cache 1024KB, n sets: 4096
+
+sim_IPC                      1.6974 # instructions per cycle
+sim_total_loads            28395259 # total number of loads executed
+sim_total_stores       8746109.0000 # total number of stores executed
+il1.miss_rate                0.0227 # miss rate (i.e., misses/ref)
+dl1.miss_rate                0.0433 # miss rate (i.e., misses/ref)
+dl1.wb_rate                  0.0127 # writeback rate (i.e., wrbks/ref)
+ul2.miss_rate                0.0016 # miss rate (i.e., misses/ref)
+ul2.wb_rate                  0.0000 # writeback rate (i.e., wrbks/ref)
+sim_cycle                  58914084 # total simulation time in cycles
+
+
+32B - L1 n:sets 128 L2 Data Cache n:sets 2048
+
+sim_IPC                      1.6970 # instructions per cycle
+sim_total_loads            28395262 # total number of loads executed
+sim_total_stores       8746109.0000 # total number of stores executed
+il1.miss_rate                0.0227 # miss rate (i.e., misses/ref)
+dl1.miss_rate                0.0433 # miss rate (i.e., misses/ref)
+dl1.wb_rate                  0.0127 # writeback rate (i.e., wrbks/ref)
+ul2.miss_rate                0.0031 # miss rate (i.e., misses/ref)
+ul2.wb_rate                  0.0011 # writeback rate (i.e., wrbks/ref)
+sim_cycle                  58928783 # total simulation time in cycles
+
+
+64B - L1 n:sets 64 L2 Data Cache n:sets 1024
+
+sim_IPC                      1.5811 # instructions per cycle
+sim_total_loads            28456863 # total number of loads executed
+sim_total_stores       8772454.0000 # total number of stores executed
+il1.miss_rate                0.0227 # miss rate (i.e., misses/ref)
+dl1.miss_rate                0.0902 # miss rate (i.e., misses/ref)
+dl1.wb_rate                  0.0216 # writeback rate (i.e., wrbks/ref)
+ul2.miss_rate                0.0011 # miss rate (i.e., misses/ref)
+ul2.wb_rate                  0.0004 # writeback rate (i.e., wrbks/ref)
+sim_cycle                  63248503 # total simulation time in cycles
+
+
+128B - L1 n:sets 32 L2 Data Cache n:sets 512
+
+sim_IPC                      1.5085 # instructions per cycle
+sim_total_loads            28460153 # total number of loads executed
+sim_total_stores       8774365.0000 # total number of stores executed
+il1.miss_rate                0.0227 # miss rate (i.e., misses/ref)
+dl1.miss_rate                0.1218 # miss rate (i.e., misses/ref)
+dl1.wb_rate                  0.0220 # writeback rate (i.e., wrbks/ref)
+ul2.miss_rate                0.0005 # miss rate (i.e., misses/ref)
+ul2.wb_rate                  0.0002 # writeback rate (i.e., wrbks/ref)
+sim_cycle                  66292434 # total simulation time in cycles
+
+
+256B - L1 n:sets 16 L2 Data Cache n:sets 256
+
+sim_IPC                      1.4739 # instructions per cycle
+sim_total_loads            28486078 # total number of loads executed
+sim_total_stores       8790765.0000 # total number of stores executed
+il1.miss_rate                0.0227 # miss rate (i.e., misses/ref)
+dl1.miss_rate                0.1510 # miss rate (i.e., misses/ref)
+dl1.wb_rate                  0.0300 # writeback rate (i.e., wrbks/ref)
+ul2.miss_rate                0.0002 # miss rate (i.e., misses/ref)
+ul2.wb_rate                  0.0001 # writeback rate (i.e., wrbks/ref)
+sim_cycle                  67847957 # total simulation time in cycles
+
+
+L2 data cache latency hit 6
+
+sim_IPC                      1.6974 # instructions per cycle
+sim_total_loads            28395259 # total number of loads executed
+sim_total_stores       8746109.0000 # total number of stores executed
+il1.miss_rate                0.0227 # miss rate (i.e., misses/ref)
+dl1.miss_rate                0.0433 # miss rate (i.e., misses/ref)
+dl1.wb_rate                  0.0127 # writeback rate (i.e., wrbks/ref)
+ul2.miss_rate                0.0016 # miss rate (i.e., misses/ref)
+ul2.wb_rate                  0.0006 # writeback rate (i.e., wrbks/ref)
+sim_cycle                  58914084 # total simulation time in cycles
+
+
+L2 data cache latency hit 10
+
+sim_IPC                      1.3919 # instructions per cycle
+sim_total_loads            28394284 # total number of loads executed
+sim_total_stores       8745415.0000 # total number of stores executed
+il1.miss_rate                0.0229 # miss rate (i.e., misses/ref)
+dl1.miss_rate                0.0433 # miss rate (i.e., misses/ref)
+dl1.wb_rate                  0.0127 # writeback rate (i.e., wrbks/ref)
+ul2.miss_rate                0.0016 # miss rate (i.e., misses/ref)
+ul2.wb_rate                  0.0006 # writeback rate (i.e., wrbks/ref)
+sim_cycle                  71843881 # total simulation time in cycles
+
+
+L2 data cache latency hit 14
+
+sim_IPC                      1.1800 # instructions per cycle
+sim_total_loads            28394282 # total number of loads executed
+sim_total_stores       8745412.0000 # total number of stores executed
+il1.miss_rate                0.0229 # miss rate (i.e., misses/ref)
+dl1.miss_rate                0.0433 # miss rate (i.e., misses/ref)
+dl1.wb_rate                  0.0127 # writeback rate (i.e., wrbks/ref)
+ul2.miss_rate                0.0016 # miss rate (i.e., misses/ref)
+ul2.wb_rate                  0.0006 # writeback rate (i.e., wrbks/ref)
+sim_cycle                  84746549 # total simulation time in cycles
+
+
+L1 data cache latency hit 2
+
+sim_IPC                      1.5847 # instructions per cycle
+sim_total_loads            28437061 # total number of loads executed
+sim_total_stores       8763499.0000 # total number of stores executed
+il1.miss_rate                0.0227 # miss rate (i.e., misses/ref)
+dl1.miss_rate                0.0435 # miss rate (i.e., misses/ref)
+dl1.wb_rate                  0.0128 # writeback rate (i.e., wrbks/ref)
+ul2.miss_rate                0.0016 # miss rate (i.e., misses/ref)
+ul2.wb_rate                  0.0006 # writeback rate (i.e., wrbks/ref)
+sim_cycle                  63103343 # total simulation time in cycles
+
+
+L1 data cache latency hit 4
+
+sim_IPC                      1.3518 # instructions per cycle
+sim_total_loads            28502897 # total number of loads executed
+sim_total_stores       8774709.0000 # total number of stores executed
+il1.miss_rate                0.0230 # miss rate (i.e., misses/ref)
+dl1.miss_rate                0.0438 # miss rate (i.e., misses/ref)
+dl1.wb_rate                  0.0129 # writeback rate (i.e., wrbks/ref)
+ul2.miss_rate                0.0016 # miss rate (i.e., misses/ref)
+ul2.wb_rate                  0.0006 # writeback rate (i.e., wrbks/ref)
+sim_cycle                  73974924 # total simulation time in cycles
