@@ -1,0 +1,2 @@
+# 100000000-instructions-evaluations-in-Linux
+This project made used of a 2 level cache - L1: split cache and L2: unified cache. I evaluated the impact of changing the cache configuration, such as L1 and L2 Cache size, Associativity, Block Size and Latency hit time. This was done using a SimpleScalar “sim-outorder” model and the SPEC 2000 benchmark suite. The result was compared using: Number of instructions per cycle (IPC),  L1 data cache miss rate L1 instruction cache miss rate L2 unified cache miss rate  The number of load instructions executed Total Simulation time
