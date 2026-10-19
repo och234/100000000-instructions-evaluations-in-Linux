@@ -8,8 +8,10 @@ import bisect
 import heapq
 import itertools
 import random
+import threading
+import time
 from collections import Counter, defaultdict, deque
-from typing import Dict, List, Optional
+from typing import Callable, Dict, List, Optional
 
 
 # 1. Number of Connected Components in an Undirected Graph (LC 323)
@@ -202,6 +204,121 @@ class LRUCache:
         node = _Node(key, value)
         self.map[key] = node
         self._push_front(node)
+
+
+# 6b. Follow-up: TTL + thread safety + single-flight loads (Cruise "LRU using timestamps").
+#     - Expired entries are never returned. get() drops them lazily; put() first purges
+#       every expired entry (min-heap of expiry times, lazy deletion), then evicts the LRU.
+#     - One lock guards every operation: get() moves nodes, so readers mutate too
+#       (a read/write lock buys nothing here). Scale-out answer: shard by hash(key).
+#     - get_or_load(): only one thread runs the loader for a missing key; the others wait.
+#       The loader runs outside the lock, so slow I/O never blocks the whole cache.
+#     get O(1); put O(log n) amortized because of the heap (O(1) if every entry shares
+#     one TTL: expiry order == insertion order, so a second linked list replaces the heap).
+class _TTLNode(_Node):
+    __slots__ = ("expires_at",)
+
+
+class TTLLRUCache:
+    def __init__(self, capacity: int, default_ttl: float, clock: Callable[[], float] = time.monotonic):
+        self.capacity, self.default_ttl, self.clock = capacity, default_ttl, clock
+        self.map: Dict[object, _TTLNode] = {}
+        self.head, self.tail = _TTLNode(), _TTLNode()
+        self.head.next, self.tail.prev = self.tail, self.head
+        self.expiry_heap: List = []  # (expires_at, seq, key); stale rows skipped on pop
+        self.seq = itertools.count()
+        self.lock = threading.Lock()
+        self.inflight: Dict[object, list] = {}  # key -> [Event, result, error]
+
+    # --- linked-list helpers (caller holds the lock) ---
+    def _unlink(self, node):
+        node.prev.next, node.next.prev = node.next, node.prev
+
+    def _push_front(self, node):
+        node.prev, node.next = self.head, self.head.next
+        self.head.next.prev = node
+        self.head.next = node
+
+    def _remove(self, node):
+        self._unlink(node)
+        del self.map[node.key]
+
+    def _purge_expired(self, now):
+        heap = self.expiry_heap
+        while heap and heap[0][0] <= now:
+            expires_at, _, key = heapq.heappop(heap)
+            node = self.map.get(key)
+            if node is not None and node.expires_at == expires_at:  # skip stale heap rows
+                self._remove(node)
+        if len(heap) > 2 * len(self.map) + 16:  # bound memory used by stale rows
+            self.expiry_heap = [(n.expires_at, next(self.seq), k) for k, n in self.map.items()]
+            heapq.heapify(self.expiry_heap)
+
+    # --- public API ---
+    def get(self, key, default=-1):
+        with self.lock:
+            node = self.map.get(key)
+            if node is None:
+                return default
+            if node.expires_at <= self.clock():
+                self._remove(node)
+                return default
+            self._unlink(node)
+            self._push_front(node)
+            return node.val
+
+    def put(self, key, value, ttl: Optional[float] = None) -> None:
+        with self.lock:
+            self._put_locked(key, value, ttl)
+
+    def _put_locked(self, key, value, ttl):
+        now = self.clock()
+        self._purge_expired(now)
+        expires_at = now + (self.default_ttl if ttl is None else ttl)
+        node = self.map.get(key)
+        if node is not None:
+            node.val, node.expires_at = value, expires_at
+            self._unlink(node)
+        else:
+            if len(self.map) >= self.capacity:
+                self._remove(self.tail.prev)  # every entry left is live: evict the LRU
+            node = _TTLNode(key, value)
+            node.expires_at = expires_at
+            self.map[key] = node
+        self._push_front(node)
+        heapq.heappush(self.expiry_heap, (expires_at, next(self.seq), key))
+
+    def get_or_load(self, key, loader: Callable[[object], object], ttl: Optional[float] = None):
+        _missing = object()
+        with self.lock:
+            node = self.map.get(key)
+            if node is not None and node.expires_at > self.clock():
+                self._unlink(node)
+                self._push_front(node)
+                return node.val
+            slot = self.inflight.get(key)
+            leader = slot is None
+            if leader:
+                slot = self.inflight[key] = [threading.Event(), _missing, None]
+        if not leader:
+            slot[0].wait()
+            if slot[2] is not None:
+                raise slot[2]
+            return slot[1]
+        try:
+            value = loader(key)  # slow I/O happens outside the lock
+        except BaseException as exc:  # failures are shared with waiters, never cached
+            with self.lock:
+                slot[2] = exc
+                del self.inflight[key]
+            slot[0].set()
+            raise
+        with self.lock:
+            self._put_locked(key, value, ttl)
+            slot[1] = value
+            del self.inflight[key]
+        slot[0].set()
+        return value
 
 
 # 7. Course Schedule I / II (LC 207 / 210) -- Kahn's topological sort, O(V + E).
@@ -511,6 +628,112 @@ def _run_checks() -> None:
     for _ in range(2000):
         s = "".join(rng.choice("abcd") for _ in range(rng.randint(1, 12)))
         assert min_deletions(s) == _bf_deletions(s), s
+
+    # 6b: TTL semantics under a fake clock, cross-checked against a brute-force model
+    class _Clock:
+        def __init__(self):
+            self.t = 0.0
+
+        def __call__(self):
+            return self.t
+
+    clk = _Clock()
+    c = TTLLRUCache(2, default_ttl=10, clock=clk)
+    c.put("a", 1)
+    clk.t = 5
+    c.put("b", 2, ttl=1)
+    assert c.get("a") == 1 and c.get("b") == 2
+    clk.t = 6  # b expires exactly at t=6 (expires_at <= now)
+    assert c.get("b") == -1
+    c.put("c", 3)
+    c.put("d", 4)  # full with a, c live -> evicts LRU a
+    assert c.get("a") == -1 and c.get("c") == 3 and c.get("d") == 4
+    clk.t = 100  # everything expired: put must purge, not evict a live entry
+    c.put("e", 5)
+    assert len(c.map) == 1 and c.get("e") == 5
+
+    for _ in range(300):
+        clk = _Clock()
+        cap = rng.randint(1, 4)
+        fast = TTLLRUCache(cap, default_ttl=5, clock=clk)
+        model = {}  # key -> [value, expires_at, last_used]
+        tick = itertools.count()
+        for _ in range(80):
+            clk.t += rng.choice([0, 0, 1, 2, 3])
+            key = rng.choice("abcdef")
+            now = clk.t
+            if rng.random() < 0.5:
+                got = fast.get(key)
+                ent = model.get(key)
+                if ent and ent[1] > now:
+                    ent[2] = next(tick)
+                    assert got == ent[0]
+                else:
+                    model.pop(key, None)
+                    assert got == -1
+            else:
+                v, ttl = rng.randint(0, 9), rng.choice([None, 1, 2, 4])
+                fast.put(key, v, ttl)
+                for k in [k for k, e in model.items() if e[1] <= now]:
+                    del model[k]
+                if key not in model and len(model) >= cap:
+                    del model[min(model, key=lambda k: model[k][2])]
+                model[key] = [v, now + (5 if ttl is None else ttl), next(tick)]
+            live = {k for k, e in model.items() if e[1] > now}
+            assert {k for k, n in fast.map.items() if n.expires_at > now} == live
+
+    # 6b: thread safety -- hammer one cache from 8 threads, then check invariants
+    shared, bad_reads = TTLLRUCache(32, default_ttl=1e9), []
+
+    def hammer(seed):  # exceptions in threads don't fail the run, so record them instead
+        r = random.Random(seed)
+        for _ in range(5000):
+            k = r.randint(0, 100)
+            if r.random() < 0.5:
+                shared.put(k, k * 10)
+            elif shared.get(k) not in (-1, k * 10):
+                bad_reads.append(k)
+
+    threads = [threading.Thread(target=hammer, args=(i,)) for i in range(8)]
+    for t in threads:
+        t.start()
+    for t in threads:
+        t.join()
+    assert not bad_reads
+    walk, node = 0, shared.head.next
+    while node is not shared.tail:
+        assert shared.map[node.key] is node and node.next.prev is node
+        walk, node = walk + 1, node.next
+    assert walk == len(shared.map) <= 32
+
+    # 6b: single-flight -- 16 threads miss the same key, the loader runs exactly once
+    calls, barrier = [], threading.Barrier(16)
+    sf = TTLLRUCache(4, default_ttl=60)
+
+    def slow_loader(k):
+        calls.append(k)
+        time.sleep(0.05)
+        return f"shard-{k}"
+
+    results = []
+
+    def worker():
+        barrier.wait()
+        results.append(sf.get_or_load("s3", slow_loader))
+
+    threads = [threading.Thread(target=worker) for _ in range(16)]
+    for t in threads:
+        t.start()
+    for t in threads:
+        t.join()
+    assert calls == ["s3"] and results == ["shard-s3"] * 16 and sf.get("s3") == "shard-s3"
+    # a failing loader propagates to the caller and is not cached
+    try:
+        sf.get_or_load("bad", lambda k: 1 / 0)
+        raise AssertionError("expected ZeroDivisionError")
+    except ZeroDivisionError:
+        pass
+    assert sf.get("bad") == -1 and not sf.inflight
 
     # 7
     order = find_order(4, [[1, 0], [2, 0], [3, 1], [3, 2]])
