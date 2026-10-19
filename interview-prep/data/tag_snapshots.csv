@@ -1,0 +1,509 @@
+dataset,asof,company,window,slug,title,difficulty,frequency
+hxu296,2022-05-10,Cruise,all,car-pooling,Car Pooling,,2
+liquidslr,2025-03-21,Cruise,3mo,course-schedule,Course Schedule,Medium,100.0
+liquidslr,2025-03-21,Cruise,6mo,course-schedule,Course Schedule,Medium,100.0
+liquidslr,2025-03-21,Cruise,all,course-schedule,Course Schedule,Medium,64.0
+liquidslr,2025-04-11,Cruise,3mo,course-schedule,Course Schedule,Medium,100.0
+liquidslr,2025-04-11,Cruise,6mo,course-schedule,Course Schedule,Medium,100.0
+liquidslr,2025-04-11,Cruise,all,course-schedule,Course Schedule,Medium,64.2
+liquidslr,2025-05-13,Cruise,6mo,course-schedule,Course Schedule,Medium,100.0
+liquidslr,2025-05-13,Cruise,all,course-schedule,Course Schedule,Medium,64.9
+liquidslr,2025-06-01,Cruise,6mo,course-schedule,Course Schedule,Medium,100.0
+liquidslr,2025-06-01,Cruise,all,course-schedule,Course Schedule,Medium,65.2
+liquidslr,2025-06-20,Cruise,6mo,course-schedule,Course Schedule,Medium,100.0
+liquidslr,2025-06-20,Cruise,all,course-schedule,Course Schedule,Medium,65.3
+snehasishroy,2025-07-12,Cruise,6mo,course-schedule,Course Schedule,Medium,100.0
+snehasishroy,2025-07-12,Cruise,all,course-schedule,Course Schedule,Medium,62.5
+snehasishroy,2025-11-22,Cruise,>6mo,course-schedule,Course Schedule,Medium,100.0
+snehasishroy,2025-11-22,Cruise,all,course-schedule,Course Schedule,Medium,62.5
+snehasishroy,2026-02-21,Cruise,>6mo,course-schedule,Course Schedule,Medium,100.0
+snehasishroy,2026-02-21,Cruise,all,course-schedule,Course Schedule,Medium,62.5
+snehasishroy,2026-05-24,Cruise,>6mo,course-schedule,Course Schedule,Medium,100.0
+snehasishroy,2026-05-24,Cruise,all,course-schedule,Course Schedule,Medium,62.5
+liquidslr,2026-06-25,Cruise,>6mo,course-schedule,Course Schedule,Medium,100.0
+liquidslr,2026-06-25,Cruise,all,course-schedule,Course Schedule,Medium,68.7
+snehasishroy,2026-07-12,Cruise,>6mo,course-schedule,Course Schedule,Medium,100.0
+snehasishroy,2026-07-12,Cruise,all,course-schedule,Course Schedule,Medium,62.5
+liquidslr,2026-08-16,Cruise,>6mo,course-schedule,Course Schedule,Medium,100.0
+liquidslr,2026-08-16,Cruise,all,course-schedule,Course Schedule,Medium,72.0
+krishnadey30,2020-08-11,Cruise,2y,decode-string,Decode String,Medium,0.0077851697215559675
+krishnadey30,2020-08-11,Cruise,all,decode-string,Decode String,Medium,0.030783500343535258
+hxu296,2022-05-10,Cruise,all,decode-string,Decode String,,2
+krishnadey30,2020-08-11,Cruise,1y,interval-list-intersections,Interval List Intersections,Medium,0.011438500466121056
+krishnadey30,2020-08-11,Cruise,2y,interval-list-intersections,Interval List Intersections,Medium,0.011438500466121056
+krishnadey30,2020-08-11,Cruise,all,interval-list-intersections,Interval List Intersections,Medium,0.025555053351030123
+krishnadey30,2020-08-11,Cruise,1y,lru-cache,LRU Cache,Medium,0.031510805207477295
+krishnadey30,2020-08-11,Cruise,2y,lru-cache,LRU Cache,Medium,0.16703842296841676
+krishnadey30,2020-08-11,Cruise,all,lru-cache,LRU Cache,Medium,0.6161320189263424
+liquidslr,2024-12-31,Cruise,>6mo,lru-cache,LRU Cache,Medium,89.9
+liquidslr,2024-12-31,Cruise,all,lru-cache,LRU Cache,Medium,79.4
+liquidslr,2025-01-07,Cruise,>6mo,lru-cache,LRU Cache,Medium,89.9
+liquidslr,2025-01-07,Cruise,all,lru-cache,LRU Cache,Medium,79.4
+liquidslr,2025-01-20,Cruise,>6mo,lru-cache,LRU Cache,Medium,89.9
+liquidslr,2025-01-20,Cruise,all,lru-cache,LRU Cache,Medium,79.4
+liquidslr,2025-02-14,Cruise,>6mo,lru-cache,LRU Cache,Medium,89.9
+liquidslr,2025-02-14,Cruise,all,lru-cache,LRU Cache,Medium,79.5
+liquidslr,2025-03-06,Cruise,>6mo,lru-cache,LRU Cache,Medium,94.2
+liquidslr,2025-03-06,Cruise,all,lru-cache,LRU Cache,Medium,79.6
+liquidslr,2025-03-21,Cruise,>6mo,lru-cache,LRU Cache,Medium,100.0
+liquidslr,2025-03-21,Cruise,all,lru-cache,LRU Cache,Medium,79.5
+liquidslr,2025-04-11,Cruise,>6mo,lru-cache,LRU Cache,Medium,92.2
+liquidslr,2025-04-11,Cruise,all,lru-cache,LRU Cache,Medium,73.2
+liquidslr,2025-05-13,Cruise,>6mo,lru-cache,LRU Cache,Medium,81.7
+liquidslr,2025-05-13,Cruise,all,lru-cache,LRU Cache,Medium,64.9
+liquidslr,2025-06-01,Cruise,>6mo,lru-cache,LRU Cache,Medium,88.6
+liquidslr,2025-06-01,Cruise,all,lru-cache,LRU Cache,Medium,65.2
+liquidslr,2025-06-20,Cruise,>6mo,lru-cache,LRU Cache,Medium,88.7
+liquidslr,2025-06-20,Cruise,all,lru-cache,LRU Cache,Medium,65.3
+krishnadey30,2020-08-11,Cruise,1y,max-area-of-island,Max Area of Island,Medium,0.019939965763769146
+krishnadey30,2020-08-11,Cruise,2y,max-area-of-island,Max Area of Island,Medium,0.02709377046225989
+krishnadey30,2020-08-11,Cruise,6mo,max-area-of-island,Max Area of Island,Medium,0.012132390248237822
+krishnadey30,2020-08-11,Cruise,all,max-area-of-island,Max Area of Island,Medium,0.02709377046225989
+liquidslr,2025-03-21,Cruise,all,meeting-rooms,Meeting Rooms,Easy,64.0
+liquidslr,2025-04-11,Cruise,all,meeting-rooms,Meeting Rooms,Easy,64.2
+liquidslr,2025-05-13,Cruise,all,meeting-rooms,Meeting Rooms,Easy,64.9
+liquidslr,2024-12-31,Cruise,>6mo,meeting-rooms-ii,Meeting Rooms II,Medium,72.6
+liquidslr,2024-12-31,Cruise,all,meeting-rooms-ii,Meeting Rooms II,Medium,63.8
+liquidslr,2025-01-07,Cruise,>6mo,meeting-rooms-ii,Meeting Rooms II,Medium,72.6
+liquidslr,2025-01-07,Cruise,all,meeting-rooms-ii,Meeting Rooms II,Medium,63.8
+liquidslr,2025-01-20,Cruise,>6mo,meeting-rooms-ii,Meeting Rooms II,Medium,72.7
+liquidslr,2025-01-20,Cruise,all,meeting-rooms-ii,Meeting Rooms II,Medium,63.9
+liquidslr,2025-02-14,Cruise,>6mo,meeting-rooms-ii,Meeting Rooms II,Medium,72.6
+liquidslr,2025-02-14,Cruise,all,meeting-rooms-ii,Meeting Rooms II,Medium,63.9
+liquidslr,2025-03-06,Cruise,>6mo,meeting-rooms-ii,Meeting Rooms II,Medium,76.3
+liquidslr,2025-03-06,Cruise,all,meeting-rooms-ii,Meeting Rooms II,Medium,64.1
+liquidslr,2025-03-21,Cruise,>6mo,meeting-rooms-ii,Meeting Rooms II,Medium,81.0
+liquidslr,2025-03-21,Cruise,all,meeting-rooms-ii,Meeting Rooms II,Medium,64.0
+liquidslr,2025-04-11,Cruise,>6mo,meeting-rooms-ii,Meeting Rooms II,Medium,81.2
+liquidslr,2025-04-11,Cruise,all,meeting-rooms-ii,Meeting Rooms II,Medium,64.2
+krishnadey30,2020-08-11,Cruise,2y,merge-intervals,Merge Intervals,Medium,0.0074386655924217485
+krishnadey30,2020-08-11,Cruise,all,merge-intervals,Merge Intervals,Medium,0.051732885823426
+liquidslr,2024-12-31,Cruise,>6mo,merge-intervals,Merge Intervals,Medium,82.7
+liquidslr,2024-12-31,Cruise,all,merge-intervals,Merge Intervals,Medium,72.9
+liquidslr,2025-01-07,Cruise,>6mo,merge-intervals,Merge Intervals,Medium,82.7
+liquidslr,2025-01-07,Cruise,all,merge-intervals,Merge Intervals,Medium,72.9
+liquidslr,2025-01-20,Cruise,>6mo,merge-intervals,Merge Intervals,Medium,82.8
+liquidslr,2025-01-20,Cruise,all,merge-intervals,Merge Intervals,Medium,73.0
+liquidslr,2025-02-14,Cruise,>6mo,merge-intervals,Merge Intervals,Medium,82.7
+liquidslr,2025-02-14,Cruise,all,merge-intervals,Merge Intervals,Medium,73.0
+liquidslr,2025-03-06,Cruise,>6mo,merge-intervals,Merge Intervals,Medium,86.8
+liquidslr,2025-03-06,Cruise,all,merge-intervals,Merge Intervals,Medium,73.2
+liquidslr,2025-03-21,Cruise,>6mo,merge-intervals,Merge Intervals,Medium,92.1
+liquidslr,2025-03-21,Cruise,all,merge-intervals,Merge Intervals,Medium,73.1
+liquidslr,2025-04-11,Cruise,>6mo,merge-intervals,Merge Intervals,Medium,92.2
+liquidslr,2025-04-11,Cruise,all,merge-intervals,Merge Intervals,Medium,73.2
+liquidslr,2025-05-13,Cruise,>6mo,merge-intervals,Merge Intervals,Medium,92.4
+liquidslr,2025-05-13,Cruise,all,merge-intervals,Merge Intervals,Medium,73.7
+liquidslr,2025-06-01,Cruise,>6mo,merge-intervals,Merge Intervals,Medium,100.0
+liquidslr,2025-06-01,Cruise,all,merge-intervals,Merge Intervals,Medium,74.0
+liquidslr,2025-06-20,Cruise,>6mo,merge-intervals,Merge Intervals,Medium,100.0
+liquidslr,2025-06-20,Cruise,all,merge-intervals,Merge Intervals,Medium,74.0
+snehasishroy,2025-07-12,Cruise,>6mo,merge-intervals,Merge Intervals,Medium,100.0
+snehasishroy,2025-07-12,Cruise,all,merge-intervals,Merge Intervals,Medium,75.0
+krishnadey30,2020-08-11,Cruise,1y,merge-k-sorted-lists,Merge k Sorted Lists,Hard,0.0038759738446929853
+krishnadey30,2020-08-11,Cruise,2y,merge-k-sorted-lists,Merge k Sorted Lists,Hard,0.008699909875545938
+krishnadey30,2020-08-11,Cruise,all,merge-k-sorted-lists,Merge k Sorted Lists,Hard,0.023981964686485415
+krishnadey30,2020-08-11,Cruise,1y,minesweeper,Minesweeper,Medium,0.03486918507635715
+krishnadey30,2020-08-11,Cruise,2y,minesweeper,Minesweeper,Medium,0.09218395607805856
+krishnadey30,2020-08-11,Cruise,all,minesweeper,Minesweeper,Medium,0.42248679567759495
+liquidslr,2025-03-21,Cruise,all,minimum-height-trees,Minimum Height Trees,Medium,64.0
+liquidslr,2025-04-11,Cruise,all,minimum-height-trees,Minimum Height Trees,Medium,64.2
+krishnadey30,2020-08-11,Cruise,1y,number-of-islands,Number of Islands,Medium,0.011015601921505717
+krishnadey30,2020-08-11,Cruise,2y,number-of-islands,Number of Islands,Medium,0.033359117749874545
+krishnadey30,2020-08-11,Cruise,all,number-of-islands,Number of Islands,Medium,0.20236848873924537
+hxu296,2022-05-10,Cruise,all,number-of-islands,Number of Islands,,2
+liquidslr,2024-12-31,Cruise,>6mo,number-of-islands,Number of Islands,Medium,82.7
+liquidslr,2024-12-31,Cruise,all,number-of-islands,Number of Islands,Medium,72.9
+liquidslr,2025-01-07,Cruise,>6mo,number-of-islands,Number of Islands,Medium,82.7
+liquidslr,2025-01-07,Cruise,all,number-of-islands,Number of Islands,Medium,72.9
+liquidslr,2025-01-20,Cruise,>6mo,number-of-islands,Number of Islands,Medium,82.8
+liquidslr,2025-01-20,Cruise,all,number-of-islands,Number of Islands,Medium,73.0
+liquidslr,2025-02-14,Cruise,>6mo,number-of-islands,Number of Islands,Medium,82.7
+liquidslr,2025-02-14,Cruise,all,number-of-islands,Number of Islands,Medium,73.0
+liquidslr,2025-03-06,Cruise,>6mo,number-of-islands,Number of Islands,Medium,86.8
+liquidslr,2025-03-06,Cruise,all,number-of-islands,Number of Islands,Medium,73.2
+liquidslr,2025-03-21,Cruise,>6mo,number-of-islands,Number of Islands,Medium,92.1
+liquidslr,2025-03-21,Cruise,all,number-of-islands,Number of Islands,Medium,73.1
+liquidslr,2025-04-11,Cruise,>6mo,number-of-islands,Number of Islands,Medium,92.2
+liquidslr,2025-04-11,Cruise,all,number-of-islands,Number of Islands,Medium,73.2
+liquidslr,2025-05-13,Cruise,>6mo,number-of-islands,Number of Islands,Medium,81.7
+liquidslr,2025-05-13,Cruise,all,number-of-islands,Number of Islands,Medium,64.9
+hxu296,2022-05-10,Cruise,all,palindrome-permutation-ii,Palindrome Permutation II,,2
+liquidslr,2024-12-31,Cruise,>6mo,palindrome-permutation-ii,Palindrome Permutation II,Medium,72.6
+liquidslr,2024-12-31,Cruise,all,palindrome-permutation-ii,Palindrome Permutation II,Medium,63.8
+liquidslr,2025-01-07,Cruise,>6mo,palindrome-permutation-ii,Palindrome Permutation II,Medium,72.6
+liquidslr,2025-01-07,Cruise,all,palindrome-permutation-ii,Palindrome Permutation II,Medium,63.8
+liquidslr,2025-01-20,Cruise,>6mo,palindrome-permutation-ii,Palindrome Permutation II,Medium,72.7
+liquidslr,2025-01-20,Cruise,all,palindrome-permutation-ii,Palindrome Permutation II,Medium,63.9
+liquidslr,2025-02-14,Cruise,>6mo,palindrome-permutation-ii,Palindrome Permutation II,Medium,72.6
+liquidslr,2025-02-14,Cruise,all,palindrome-permutation-ii,Palindrome Permutation II,Medium,63.9
+liquidslr,2025-03-06,Cruise,>6mo,palindrome-permutation-ii,Palindrome Permutation II,Medium,76.3
+liquidslr,2025-03-06,Cruise,all,palindrome-permutation-ii,Palindrome Permutation II,Medium,64.1
+liquidslr,2025-03-21,Cruise,>6mo,palindrome-permutation-ii,Palindrome Permutation II,Medium,81.0
+liquidslr,2025-03-21,Cruise,all,palindrome-permutation-ii,Palindrome Permutation II,Medium,64.0
+liquidslr,2025-04-11,Cruise,>6mo,palindrome-permutation-ii,Palindrome Permutation II,Medium,81.2
+liquidslr,2025-04-11,Cruise,all,palindrome-permutation-ii,Palindrome Permutation II,Medium,64.2
+hxu296,2022-05-10,Cruise,all,product-of-the-last-k-numbers,Product of the Last K Numbers,,2
+krishnadey30,2020-08-11,Cruise,1y,range-sum-query-2d-immutable,Range Sum Query 2D - Immutable,Medium,0.023009339909829205
+krishnadey30,2020-08-11,Cruise,2y,range-sum-query-2d-immutable,Range Sum Query 2D - Immutable,Medium,0.03016314460831995
+krishnadey30,2020-08-11,Cruise,6mo,range-sum-query-2d-immutable,Range Sum Query 2D - Immutable,Medium,0.024264780496475645
+krishnadey30,2020-08-11,Cruise,all,range-sum-query-2d-immutable,Range Sum Query 2D - Immutable,Medium,0.053010091368830885
+liquidslr,2024-12-31,Cruise,>6mo,robot-room-cleaner,Robot Room Cleaner,Hard,72.6
+liquidslr,2024-12-31,Cruise,all,robot-room-cleaner,Robot Room Cleaner,Hard,63.8
+liquidslr,2025-01-07,Cruise,>6mo,robot-room-cleaner,Robot Room Cleaner,Hard,72.6
+liquidslr,2025-01-07,Cruise,all,robot-room-cleaner,Robot Room Cleaner,Hard,63.8
+liquidslr,2025-01-20,Cruise,>6mo,robot-room-cleaner,Robot Room Cleaner,Hard,72.7
+liquidslr,2025-01-20,Cruise,all,robot-room-cleaner,Robot Room Cleaner,Hard,63.9
+liquidslr,2025-02-14,Cruise,>6mo,robot-room-cleaner,Robot Room Cleaner,Hard,72.6
+liquidslr,2025-02-14,Cruise,all,robot-room-cleaner,Robot Room Cleaner,Hard,63.9
+liquidslr,2025-03-06,Cruise,>6mo,robot-room-cleaner,Robot Room Cleaner,Hard,76.3
+liquidslr,2025-03-06,Cruise,all,robot-room-cleaner,Robot Room Cleaner,Hard,64.1
+liquidslr,2025-03-21,Cruise,>6mo,robot-room-cleaner,Robot Room Cleaner,Hard,81.0
+liquidslr,2025-03-21,Cruise,all,robot-room-cleaner,Robot Room Cleaner,Hard,64.0
+krishnadey30,2020-08-11,Cruise,all,synonymous-sentences,Synonymous Sentences,Medium,0.6677654778785802
+hxu296,2022-05-10,Cruise,all,synonymous-sentences,Synonymous Sentences,,3
+liquidslr,2024-12-31,Cruise,6mo,synonymous-sentences,Synonymous Sentences,Medium,100.0
+liquidslr,2024-12-31,Cruise,all,synonymous-sentences,Synonymous Sentences,Medium,100.0
+liquidslr,2025-01-07,Cruise,6mo,synonymous-sentences,Synonymous Sentences,Medium,100.0
+liquidslr,2025-01-07,Cruise,all,synonymous-sentences,Synonymous Sentences,Medium,100.0
+liquidslr,2025-01-20,Cruise,6mo,synonymous-sentences,Synonymous Sentences,Medium,100.0
+liquidslr,2025-01-20,Cruise,all,synonymous-sentences,Synonymous Sentences,Medium,100.0
+liquidslr,2025-02-14,Cruise,>6mo,synonymous-sentences,Synonymous Sentences,Medium,72.6
+liquidslr,2025-02-14,Cruise,all,synonymous-sentences,Synonymous Sentences,Medium,100.0
+liquidslr,2025-03-06,Cruise,>6mo,synonymous-sentences,Synonymous Sentences,Medium,76.3
+liquidslr,2025-03-06,Cruise,all,synonymous-sentences,Synonymous Sentences,Medium,100.0
+liquidslr,2025-03-21,Cruise,>6mo,synonymous-sentences,Synonymous Sentences,Medium,81.0
+liquidslr,2025-03-21,Cruise,all,synonymous-sentences,Synonymous Sentences,Medium,100.0
+liquidslr,2025-04-11,Cruise,>6mo,synonymous-sentences,Synonymous Sentences,Medium,81.2
+liquidslr,2025-04-11,Cruise,all,synonymous-sentences,Synonymous Sentences,Medium,100.0
+liquidslr,2025-05-13,Cruise,>6mo,synonymous-sentences,Synonymous Sentences,Medium,81.7
+liquidslr,2025-05-13,Cruise,all,synonymous-sentences,Synonymous Sentences,Medium,100.0
+liquidslr,2025-06-01,Cruise,>6mo,synonymous-sentences,Synonymous Sentences,Medium,88.6
+liquidslr,2025-06-01,Cruise,all,synonymous-sentences,Synonymous Sentences,Medium,100.0
+liquidslr,2025-06-20,Cruise,>6mo,synonymous-sentences,Synonymous Sentences,Medium,88.7
+liquidslr,2025-06-20,Cruise,all,synonymous-sentences,Synonymous Sentences,Medium,100.0
+snehasishroy,2025-07-12,Cruise,>6mo,synonymous-sentences,Synonymous Sentences,Medium,87.5
+snehasishroy,2025-07-12,Cruise,all,synonymous-sentences,Synonymous Sentences,Medium,100.0
+snehasishroy,2025-11-22,Cruise,>6mo,synonymous-sentences,Synonymous Sentences,Medium,100.0
+snehasishroy,2025-11-22,Cruise,all,synonymous-sentences,Synonymous Sentences,Medium,100.0
+snehasishroy,2026-02-21,Cruise,>6mo,synonymous-sentences,Synonymous Sentences,Medium,100.0
+snehasishroy,2026-02-21,Cruise,all,synonymous-sentences,Synonymous Sentences,Medium,100.0
+snehasishroy,2026-05-24,Cruise,>6mo,synonymous-sentences,Synonymous Sentences,Medium,100.0
+snehasishroy,2026-05-24,Cruise,all,synonymous-sentences,Synonymous Sentences,Medium,100.0
+liquidslr,2026-06-25,Cruise,>6mo,synonymous-sentences,Synonymous Sentences,Medium,100.0
+liquidslr,2026-06-25,Cruise,all,synonymous-sentences,Synonymous Sentences,Medium,100.0
+snehasishroy,2026-07-12,Cruise,>6mo,synonymous-sentences,Synonymous Sentences,Medium,100.0
+snehasishroy,2026-07-12,Cruise,all,synonymous-sentences,Synonymous Sentences,Medium,100.0
+liquidslr,2026-08-16,Cruise,all,synonymous-sentences,Synonymous Sentences,Medium,100.0
+hxu296,2022-05-10,Cruise,all,the-skyline-problem,The Skyline Problem,,3
+liquidslr,2024-12-31,Cruise,>6mo,two-sum,Two Sum,Easy,72.6
+liquidslr,2024-12-31,Cruise,all,two-sum,Two Sum,Easy,63.8
+liquidslr,2025-01-07,Cruise,>6mo,two-sum,Two Sum,Easy,72.6
+liquidslr,2025-01-07,Cruise,all,two-sum,Two Sum,Easy,63.8
+liquidslr,2025-01-20,Cruise,>6mo,two-sum,Two Sum,Easy,72.7
+liquidslr,2025-01-20,Cruise,all,two-sum,Two Sum,Easy,63.9
+liquidslr,2025-02-14,Cruise,>6mo,two-sum,Two Sum,Easy,72.6
+liquidslr,2025-02-14,Cruise,all,two-sum,Two Sum,Easy,63.9
+liquidslr,2025-03-06,Cruise,>6mo,two-sum,Two Sum,Easy,76.3
+liquidslr,2025-03-06,Cruise,all,two-sum,Two Sum,Easy,64.1
+liquidslr,2025-03-21,Cruise,>6mo,two-sum,Two Sum,Easy,81.0
+liquidslr,2025-03-21,Cruise,all,two-sum,Two Sum,Easy,64.0
+liquidslr,2025-04-11,Cruise,>6mo,two-sum,Two Sum,Easy,81.2
+liquidslr,2025-04-11,Cruise,all,two-sum,Two Sum,Easy,64.2
+liquidslr,2024-12-31,Cruise,>6mo,unique-paths,Unique Paths,Medium,72.6
+liquidslr,2024-12-31,Cruise,all,unique-paths,Unique Paths,Medium,63.8
+liquidslr,2025-01-07,Cruise,>6mo,unique-paths,Unique Paths,Medium,72.6
+liquidslr,2025-01-07,Cruise,all,unique-paths,Unique Paths,Medium,63.8
+liquidslr,2025-01-20,Cruise,>6mo,unique-paths,Unique Paths,Medium,72.7
+liquidslr,2025-01-20,Cruise,all,unique-paths,Unique Paths,Medium,63.9
+liquidslr,2025-02-14,Cruise,>6mo,unique-paths,Unique Paths,Medium,72.6
+liquidslr,2025-02-14,Cruise,all,unique-paths,Unique Paths,Medium,63.9
+liquidslr,2025-03-06,Cruise,>6mo,unique-paths,Unique Paths,Medium,76.3
+liquidslr,2025-03-06,Cruise,all,unique-paths,Unique Paths,Medium,64.1
+liquidslr,2025-03-21,Cruise,>6mo,unique-paths,Unique Paths,Medium,81.0
+liquidslr,2025-03-21,Cruise,all,unique-paths,Unique Paths,Medium,64.0
+liquidslr,2025-04-11,Cruise,>6mo,unique-paths,Unique Paths,Medium,81.2
+liquidslr,2025-04-11,Cruise,all,unique-paths,Unique Paths,Medium,64.2
+krishnadey30,2020-08-11,Cruise,1y,unique-paths-ii,Unique Paths II,Medium,0.008375258336732413
+krishnadey30,2020-08-11,Cruise,2y,unique-paths-ii,Unique Paths II,Medium,0.008375258336732413
+krishnadey30,2020-08-11,Cruise,all,unique-paths-ii,Unique Paths II,Medium,0.008375258336732413
+hxu296,2022-05-10,Cruise,all,unique-paths-ii,Unique Paths II,,9
+liquidslr,2024-12-31,Cruise,>6mo,unique-paths-ii,Unique Paths II,Medium,100.0
+liquidslr,2024-12-31,Cruise,all,unique-paths-ii,Unique Paths II,Medium,88.5
+liquidslr,2025-01-07,Cruise,>6mo,unique-paths-ii,Unique Paths II,Medium,100.0
+liquidslr,2025-01-07,Cruise,all,unique-paths-ii,Unique Paths II,Medium,88.5
+liquidslr,2025-01-20,Cruise,>6mo,unique-paths-ii,Unique Paths II,Medium,100.0
+liquidslr,2025-01-20,Cruise,all,unique-paths-ii,Unique Paths II,Medium,88.5
+liquidslr,2025-02-14,Cruise,>6mo,unique-paths-ii,Unique Paths II,Medium,100.0
+liquidslr,2025-02-14,Cruise,all,unique-paths-ii,Unique Paths II,Medium,88.5
+liquidslr,2025-03-06,Cruise,>6mo,unique-paths-ii,Unique Paths II,Medium,100.0
+liquidslr,2025-03-06,Cruise,all,unique-paths-ii,Unique Paths II,Medium,84.5
+liquidslr,2025-03-21,Cruise,>6mo,unique-paths-ii,Unique Paths II,Medium,100.0
+liquidslr,2025-03-21,Cruise,all,unique-paths-ii,Unique Paths II,Medium,79.5
+liquidslr,2025-04-11,Cruise,>6mo,unique-paths-ii,Unique Paths II,Medium,100.0
+liquidslr,2025-04-11,Cruise,all,unique-paths-ii,Unique Paths II,Medium,79.6
+liquidslr,2025-05-13,Cruise,>6mo,unique-paths-ii,Unique Paths II,Medium,92.4
+liquidslr,2025-05-13,Cruise,all,unique-paths-ii,Unique Paths II,Medium,73.7
+liquidslr,2025-06-01,Cruise,>6mo,unique-paths-ii,Unique Paths II,Medium,100.0
+liquidslr,2025-06-01,Cruise,all,unique-paths-ii,Unique Paths II,Medium,74.0
+liquidslr,2025-06-20,Cruise,>6mo,unique-paths-ii,Unique Paths II,Medium,100.0
+liquidslr,2025-06-20,Cruise,all,unique-paths-ii,Unique Paths II,Medium,74.0
+snehasishroy,2025-07-12,Cruise,>6mo,unique-paths-ii,Unique Paths II,Medium,100.0
+snehasishroy,2025-07-12,Cruise,all,unique-paths-ii,Unique Paths II,Medium,75.0
+liquidslr,2024-12-31,Cruise,>6mo,unique-paths-iii,Unique Paths III,Hard,100.0
+liquidslr,2024-12-31,Cruise,all,unique-paths-iii,Unique Paths III,Hard,88.5
+liquidslr,2025-01-07,Cruise,>6mo,unique-paths-iii,Unique Paths III,Hard,100.0
+liquidslr,2025-01-07,Cruise,all,unique-paths-iii,Unique Paths III,Hard,88.5
+liquidslr,2025-01-20,Cruise,>6mo,unique-paths-iii,Unique Paths III,Hard,100.0
+liquidslr,2025-01-20,Cruise,all,unique-paths-iii,Unique Paths III,Hard,88.5
+liquidslr,2025-02-14,Cruise,>6mo,unique-paths-iii,Unique Paths III,Hard,95.5
+liquidslr,2025-02-14,Cruise,all,unique-paths-iii,Unique Paths III,Hard,84.5
+liquidslr,2025-03-06,Cruise,>6mo,unique-paths-iii,Unique Paths III,Hard,94.2
+liquidslr,2025-03-06,Cruise,all,unique-paths-iii,Unique Paths III,Hard,79.6
+liquidslr,2025-03-21,Cruise,>6mo,unique-paths-iii,Unique Paths III,Hard,100.0
+liquidslr,2025-03-21,Cruise,all,unique-paths-iii,Unique Paths III,Hard,79.5
+liquidslr,2025-04-11,Cruise,>6mo,unique-paths-iii,Unique Paths III,Hard,100.0
+liquidslr,2025-04-11,Cruise,all,unique-paths-iii,Unique Paths III,Hard,79.6
+liquidslr,2025-05-13,Cruise,>6mo,unique-paths-iii,Unique Paths III,Hard,100.0
+liquidslr,2025-05-13,Cruise,all,unique-paths-iii,Unique Paths III,Hard,80.0
+liquidslr,2025-06-01,Cruise,>6mo,unique-paths-iii,Unique Paths III,Hard,100.0
+liquidslr,2025-06-01,Cruise,all,unique-paths-iii,Unique Paths III,Hard,74.0
+liquidslr,2025-06-20,Cruise,>6mo,unique-paths-iii,Unique Paths III,Hard,100.0
+liquidslr,2025-06-20,Cruise,all,unique-paths-iii,Unique Paths III,Hard,74.0
+snehasishroy,2025-07-12,Cruise,>6mo,unique-paths-iii,Unique Paths III,Hard,100.0
+snehasishroy,2025-07-12,Cruise,all,unique-paths-iii,Unique Paths III,Hard,75.0
+krishnadey30,2020-08-11,Cruise,1y,valid-sudoku,Valid Sudoku,Medium,0.0069420618952821065
+krishnadey30,2020-08-11,Cruise,2y,valid-sudoku,Valid Sudoku,Medium,0.0069420618952821065
+krishnadey30,2020-08-11,Cruise,all,valid-sudoku,Valid Sudoku,Medium,0.0069420618952821065
+hxu296,2022-05-10,Cruise,all,valid-sudoku,Valid Sudoku,,5
+krishnadey30,2020-08-11,Cruise,2y,wildcard-matching,Wildcard Matching,Hard,0.013110643383019215
+krishnadey30,2020-08-11,Cruise,all,wildcard-matching,Wildcard Matching,Hard,0.029260865212976276
+liquidslr,2024-12-31,Cruise,>6mo,word-ladder,Word Ladder,Hard,72.6
+liquidslr,2024-12-31,Cruise,all,word-ladder,Word Ladder,Hard,63.8
+liquidslr,2025-01-07,Cruise,>6mo,word-ladder,Word Ladder,Hard,72.6
+liquidslr,2025-01-07,Cruise,all,word-ladder,Word Ladder,Hard,63.8
+liquidslr,2025-01-20,Cruise,>6mo,word-ladder,Word Ladder,Hard,72.7
+liquidslr,2025-01-20,Cruise,all,word-ladder,Word Ladder,Hard,63.9
+liquidslr,2025-02-14,Cruise,>6mo,word-ladder,Word Ladder,Hard,72.6
+liquidslr,2025-02-14,Cruise,all,word-ladder,Word Ladder,Hard,63.9
+liquidslr,2025-03-06,Cruise,>6mo,word-ladder,Word Ladder,Hard,76.3
+liquidslr,2025-03-06,Cruise,all,word-ladder,Word Ladder,Hard,64.1
+liquidslr,2025-03-21,Cruise,>6mo,word-ladder,Word Ladder,Hard,81.0
+liquidslr,2025-03-21,Cruise,all,word-ladder,Word Ladder,Hard,64.0
+krishnadey30,2020-08-11,Cruise,1y,word-search,Word Search,Medium,0.0016410260092945288
+krishnadey30,2020-08-11,Cruise,2y,word-search,Word Search,Medium,0.006548007844690591
+krishnadey30,2020-08-11,Cruise,all,word-search,Word Search,Medium,0.014673179500416637
+krishnadey30,2020-08-11,Cruise,2y,zigzag-iterator,Zigzag Iterator,Medium,0.10821358464023274
+krishnadey30,2020-08-11,Cruise,all,zigzag-iterator,Zigzag Iterator,Medium,0.22884157242884745
+liquidslr,2025-06-01,GM,all,dot-product-of-two-sparse-vectors,Dot Product of Two Sparse Vectors,Medium,59.0
+liquidslr,2025-06-20,GM,all,dot-product-of-two-sparse-vectors,Dot Product of Two Sparse Vectors,Medium,56.8
+snehasishroy,2025-07-12,GM,all,dot-product-of-two-sparse-vectors,Dot Product of Two Sparse Vectors,Medium,50.0
+snehasishroy,2025-11-22,GM,>6mo,dot-product-of-two-sparse-vectors,Dot Product of Two Sparse Vectors,Medium,62.5
+snehasishroy,2025-11-22,GM,all,dot-product-of-two-sparse-vectors,Dot Product of Two Sparse Vectors,Medium,50.0
+snehasishroy,2026-02-21,GM,>6mo,dot-product-of-two-sparse-vectors,Dot Product of Two Sparse Vectors,Medium,50.0
+snehasishroy,2026-02-21,GM,all,dot-product-of-two-sparse-vectors,Dot Product of Two Sparse Vectors,Medium,62.5
+snehasishroy,2026-05-24,GM,>6mo,dot-product-of-two-sparse-vectors,Dot Product of Two Sparse Vectors,Medium,50.0
+snehasishroy,2026-05-24,GM,all,dot-product-of-two-sparse-vectors,Dot Product of Two Sparse Vectors,Medium,62.5
+liquidslr,2026-06-25,GM,>6mo,dot-product-of-two-sparse-vectors,Dot Product of Two Sparse Vectors,Medium,53.0
+liquidslr,2026-06-25,GM,all,dot-product-of-two-sparse-vectors,Dot Product of Two Sparse Vectors,Medium,59.1
+snehasishroy,2026-07-12,GM,>6mo,dot-product-of-two-sparse-vectors,Dot Product of Two Sparse Vectors,Medium,62.5
+snehasishroy,2026-07-12,GM,all,dot-product-of-two-sparse-vectors,Dot Product of Two Sparse Vectors,Medium,62.5
+liquidslr,2026-08-16,GM,>6mo,dot-product-of-two-sparse-vectors,Dot Product of Two Sparse Vectors,Medium,60.2
+liquidslr,2026-08-16,GM,all,dot-product-of-two-sparse-vectors,Dot Product of Two Sparse Vectors,Medium,59.4
+liquidslr,2025-03-21,GM,all,first-missing-positive,First Missing Positive,Hard,62.8
+liquidslr,2025-04-11,GM,all,first-missing-positive,First Missing Positive,Hard,61.8
+liquidslr,2025-05-13,GM,all,first-missing-positive,First Missing Positive,Hard,60.0
+liquidslr,2025-06-01,GM,all,first-missing-positive,First Missing Positive,Hard,59.0
+liquidslr,2025-06-20,GM,>6mo,first-missing-positive,First Missing Positive,Hard,70.6
+liquidslr,2025-06-20,GM,all,first-missing-positive,First Missing Positive,Hard,64.4
+snehasishroy,2025-07-12,GM,>6mo,first-missing-positive,First Missing Positive,Hard,75.0
+snehasishroy,2025-07-12,GM,all,first-missing-positive,First Missing Positive,Hard,62.5
+snehasishroy,2025-11-22,GM,all,first-missing-positive,First Missing Positive,Hard,50.0
+snehasishroy,2026-02-21,GM,>6mo,first-missing-positive,First Missing Positive,Hard,50.0
+snehasishroy,2026-02-21,GM,all,first-missing-positive,First Missing Positive,Hard,50.0
+snehasishroy,2026-05-24,GM,>6mo,first-missing-positive,First Missing Positive,Hard,50.0
+snehasishroy,2026-05-24,GM,all,first-missing-positive,First Missing Positive,Hard,50.0
+liquidslr,2026-06-25,GM,>6mo,first-missing-positive,First Missing Positive,Hard,53.0
+liquidslr,2026-06-25,GM,all,first-missing-positive,First Missing Positive,Hard,51.6
+snehasishroy,2026-07-12,GM,>6mo,first-missing-positive,First Missing Positive,Hard,50.0
+snehasishroy,2026-07-12,GM,all,first-missing-positive,First Missing Positive,Hard,50.0
+liquidslr,2026-08-16,GM,>6mo,first-missing-positive,First Missing Positive,Hard,52.8
+liquidslr,2026-08-16,GM,all,first-missing-positive,First Missing Positive,Hard,51.8
+snehasishroy,2026-05-24,GM,all,guess-the-word,Guess the Word,Hard,50.0
+liquidslr,2026-06-25,GM,all,guess-the-word,Guess the Word,Hard,51.6
+snehasishroy,2026-07-12,GM,all,guess-the-word,Guess the Word,Hard,50.0
+liquidslr,2026-08-16,GM,all,guess-the-word,Guess the Word,Hard,51.8
+snehasishroy,2025-11-22,GM,6mo,implement-trie-prefix-tree,Implement Trie (Prefix Tree),Medium,75.0
+snehasishroy,2025-11-22,GM,all,implement-trie-prefix-tree,Implement Trie (Prefix Tree),Medium,62.5
+snehasishroy,2026-02-21,GM,>6mo,implement-trie-prefix-tree,Implement Trie (Prefix Tree),Medium,62.5
+snehasishroy,2026-02-21,GM,all,implement-trie-prefix-tree,Implement Trie (Prefix Tree),Medium,62.5
+snehasishroy,2026-05-24,GM,>6mo,implement-trie-prefix-tree,Implement Trie (Prefix Tree),Medium,62.5
+snehasishroy,2026-05-24,GM,all,implement-trie-prefix-tree,Implement Trie (Prefix Tree),Medium,62.5
+liquidslr,2026-06-25,GM,>6mo,implement-trie-prefix-tree,Implement Trie (Prefix Tree),Medium,65.5
+liquidslr,2026-06-25,GM,all,implement-trie-prefix-tree,Implement Trie (Prefix Tree),Medium,64.5
+snehasishroy,2026-07-12,GM,>6mo,implement-trie-prefix-tree,Implement Trie (Prefix Tree),Medium,62.5
+snehasishroy,2026-07-12,GM,all,implement-trie-prefix-tree,Implement Trie (Prefix Tree),Medium,62.5
+liquidslr,2026-08-16,GM,>6mo,implement-trie-prefix-tree,Implement Trie (Prefix Tree),Medium,65.5
+liquidslr,2026-08-16,GM,all,implement-trie-prefix-tree,Implement Trie (Prefix Tree),Medium,64.8
+liquidslr,2025-03-21,GM,all,last-visited-integers,Last Visited Integers,Easy,62.8
+liquidslr,2025-04-11,GM,all,last-visited-integers,Last Visited Integers,Easy,61.8
+liquidslr,2025-05-13,GM,all,last-visited-integers,Last Visited Integers,Easy,60.0
+liquidslr,2025-06-01,GM,all,last-visited-integers,Last Visited Integers,Easy,59.0
+liquidslr,2025-06-20,GM,all,last-visited-integers,Last Visited Integers,Easy,56.8
+snehasishroy,2025-07-12,GM,all,last-visited-integers,Last Visited Integers,Easy,50.0
+liquidslr,2025-03-21,GM,>6mo,lru-cache,LRU Cache,Medium,100.0
+liquidslr,2025-03-21,GM,all,lru-cache,LRU Cache,Medium,70.9
+liquidslr,2025-04-11,GM,>6mo,lru-cache,LRU Cache,Medium,78.9
+liquidslr,2025-04-11,GM,all,lru-cache,LRU Cache,Medium,61.8
+liquidslr,2025-05-13,GM,>6mo,lru-cache,LRU Cache,Medium,75.6
+liquidslr,2025-05-13,GM,all,lru-cache,LRU Cache,Medium,60.0
+liquidslr,2025-06-01,GM,>6mo,lru-cache,LRU Cache,Medium,72.7
+liquidslr,2025-06-01,GM,all,lru-cache,LRU Cache,Medium,59.0
+liquidslr,2025-06-20,GM,>6mo,lru-cache,LRU Cache,Medium,70.6
+liquidslr,2025-06-20,GM,all,lru-cache,LRU Cache,Medium,56.8
+snehasishroy,2025-07-12,GM,>6mo,lru-cache,LRU Cache,Medium,75.0
+snehasishroy,2025-07-12,GM,all,lru-cache,LRU Cache,Medium,50.0
+snehasishroy,2025-11-22,GM,6mo,lru-cache,LRU Cache,Medium,62.5
+snehasishroy,2025-11-22,GM,all,lru-cache,LRU Cache,Medium,62.5
+snehasishroy,2026-02-21,GM,all,lru-cache,LRU Cache,Medium,50.0
+snehasishroy,2026-05-24,GM,>6mo,lru-cache,LRU Cache,Medium,50.0
+snehasishroy,2026-05-24,GM,all,lru-cache,LRU Cache,Medium,50.0
+liquidslr,2026-06-25,GM,>6mo,lru-cache,LRU Cache,Medium,53.0
+liquidslr,2026-06-25,GM,all,lru-cache,LRU Cache,Medium,51.6
+snehasishroy,2026-07-12,GM,>6mo,lru-cache,LRU Cache,Medium,50.0
+snehasishroy,2026-07-12,GM,all,lru-cache,LRU Cache,Medium,50.0
+liquidslr,2026-08-16,GM,>6mo,lru-cache,LRU Cache,Medium,52.8
+liquidslr,2026-08-16,GM,all,lru-cache,LRU Cache,Medium,51.8
+snehasishroy,2026-02-21,GM,6mo,maximum-sum-of-3-non-overlapping-subarrays,Maximum Sum of 3 Non-Overlapping Subarrays,Hard,87.5
+snehasishroy,2026-02-21,GM,all,maximum-sum-of-3-non-overlapping-subarrays,Maximum Sum of 3 Non-Overlapping Subarrays,Hard,50.0
+snehasishroy,2026-05-24,GM,6mo,maximum-sum-of-3-non-overlapping-subarrays,Maximum Sum of 3 Non-Overlapping Subarrays,Hard,87.5
+snehasishroy,2026-05-24,GM,all,maximum-sum-of-3-non-overlapping-subarrays,Maximum Sum of 3 Non-Overlapping Subarrays,Hard,62.5
+liquidslr,2026-06-25,GM,6mo,maximum-sum-of-3-non-overlapping-subarrays,Maximum Sum of 3 Non-Overlapping Subarrays,Hard,89.4
+liquidslr,2026-06-25,GM,all,maximum-sum-of-3-non-overlapping-subarrays,Maximum Sum of 3 Non-Overlapping Subarrays,Hard,59.1
+snehasishroy,2026-07-12,GM,6mo,maximum-sum-of-3-non-overlapping-subarrays,Maximum Sum of 3 Non-Overlapping Subarrays,Hard,87.5
+snehasishroy,2026-07-12,GM,all,maximum-sum-of-3-non-overlapping-subarrays,Maximum Sum of 3 Non-Overlapping Subarrays,Hard,62.5
+liquidslr,2026-08-16,GM,>6mo,maximum-sum-of-3-non-overlapping-subarrays,Maximum Sum of 3 Non-Overlapping Subarrays,Hard,52.8
+liquidslr,2026-08-16,GM,all,maximum-sum-of-3-non-overlapping-subarrays,Maximum Sum of 3 Non-Overlapping Subarrays,Hard,59.4
+liquidslr,2026-08-16,GM,6mo,merge-intervals,Merge Intervals,Medium,100.0
+liquidslr,2026-08-16,GM,all,merge-intervals,Merge Intervals,Medium,51.8
+snehasishroy,2026-07-12,GM,6mo,minimum-deletions-to-make-character-frequencies-unique,Minimum Deletions to Make Character Frequencies Unique,Medium,87.5
+snehasishroy,2026-07-12,GM,all,minimum-deletions-to-make-character-frequencies-unique,Minimum Deletions to Make Character Frequencies Unique,Medium,50.0
+liquidslr,2026-08-16,GM,all,minimum-deletions-to-make-character-frequencies-unique,Minimum Deletions to Make Character Frequencies Unique,Medium,51.8
+liquidslr,2025-03-21,GM,6mo,minimum-path-sum,Minimum Path Sum,Medium,68.7
+liquidslr,2025-03-21,GM,all,minimum-path-sum,Minimum Path Sum,Medium,62.8
+liquidslr,2025-04-11,GM,3mo,minimum-path-sum,Minimum Path Sum,Medium,77.6
+liquidslr,2025-04-11,GM,6mo,minimum-path-sum,Minimum Path Sum,Medium,78.3
+liquidslr,2025-04-11,GM,all,minimum-path-sum,Minimum Path Sum,Medium,69.8
+liquidslr,2025-05-13,GM,6mo,minimum-path-sum,Minimum Path Sum,Medium,76.6
+liquidslr,2025-05-13,GM,all,minimum-path-sum,Minimum Path Sum,Medium,67.8
+liquidslr,2025-06-01,GM,6mo,minimum-path-sum,Minimum Path Sum,Medium,68.5
+liquidslr,2025-06-01,GM,all,minimum-path-sum,Minimum Path Sum,Medium,66.7
+liquidslr,2025-06-20,GM,6mo,minimum-path-sum,Minimum Path Sum,Medium,65.7
+liquidslr,2025-06-20,GM,all,minimum-path-sum,Minimum Path Sum,Medium,64.4
+snehasishroy,2025-07-12,GM,6mo,minimum-path-sum,Minimum Path Sum,Medium,62.5
+snehasishroy,2025-07-12,GM,all,minimum-path-sum,Minimum Path Sum,Medium,62.5
+snehasishroy,2025-11-22,GM,>6mo,minimum-path-sum,Minimum Path Sum,Medium,62.5
+snehasishroy,2025-11-22,GM,all,minimum-path-sum,Minimum Path Sum,Medium,62.5
+snehasishroy,2026-02-21,GM,>6mo,minimum-path-sum,Minimum Path Sum,Medium,62.5
+snehasishroy,2026-02-21,GM,all,minimum-path-sum,Minimum Path Sum,Medium,62.5
+snehasishroy,2026-05-24,GM,>6mo,minimum-path-sum,Minimum Path Sum,Medium,62.5
+snehasishroy,2026-05-24,GM,all,minimum-path-sum,Minimum Path Sum,Medium,62.5
+liquidslr,2026-06-25,GM,>6mo,minimum-path-sum,Minimum Path Sum,Medium,60.3
+liquidslr,2026-06-25,GM,all,minimum-path-sum,Minimum Path Sum,Medium,59.1
+snehasishroy,2026-07-12,GM,>6mo,minimum-path-sum,Minimum Path Sum,Medium,62.5
+snehasishroy,2026-07-12,GM,all,minimum-path-sum,Minimum Path Sum,Medium,62.5
+liquidslr,2026-08-16,GM,>6mo,minimum-path-sum,Minimum Path Sum,Medium,60.2
+liquidslr,2026-08-16,GM,all,minimum-path-sum,Minimum Path Sum,Medium,59.4
+liquidslr,2025-03-21,GM,3mo,number-of-connected-components-in-an-undirected-graph,Number of Connected Components in an Undirected Graph,Medium,100.0
+liquidslr,2025-03-21,GM,6mo,number-of-connected-components-in-an-undirected-graph,Number of Connected Components in an Undirected Graph,Medium,100.0
+liquidslr,2025-03-21,GM,>6mo,number-of-connected-components-in-an-undirected-graph,Number of Connected Components in an Undirected Graph,Medium,100.0
+liquidslr,2025-03-21,GM,all,number-of-connected-components-in-an-undirected-graph,Number of Connected Components in an Undirected Graph,Medium,100.0
+liquidslr,2025-04-11,GM,3mo,number-of-connected-components-in-an-undirected-graph,Number of Connected Components in an Undirected Graph,Medium,100.0
+liquidslr,2025-04-11,GM,6mo,number-of-connected-components-in-an-undirected-graph,Number of Connected Components in an Undirected Graph,Medium,100.0
+liquidslr,2025-04-11,GM,>6mo,number-of-connected-components-in-an-undirected-graph,Number of Connected Components in an Undirected Graph,Medium,100.0
+liquidslr,2025-04-11,GM,all,number-of-connected-components-in-an-undirected-graph,Number of Connected Components in an Undirected Graph,Medium,100.0
+liquidslr,2025-05-13,GM,30d,number-of-connected-components-in-an-undirected-graph,Number of Connected Components in an Undirected Graph,Medium,100.0
+liquidslr,2025-05-13,GM,3mo,number-of-connected-components-in-an-undirected-graph,Number of Connected Components in an Undirected Graph,Medium,100.0
+liquidslr,2025-05-13,GM,6mo,number-of-connected-components-in-an-undirected-graph,Number of Connected Components in an Undirected Graph,Medium,100.0
+liquidslr,2025-05-13,GM,>6mo,number-of-connected-components-in-an-undirected-graph,Number of Connected Components in an Undirected Graph,Medium,100.0
+liquidslr,2025-05-13,GM,all,number-of-connected-components-in-an-undirected-graph,Number of Connected Components in an Undirected Graph,Medium,100.0
+liquidslr,2025-06-01,GM,3mo,number-of-connected-components-in-an-undirected-graph,Number of Connected Components in an Undirected Graph,Medium,100.0
+liquidslr,2025-06-01,GM,6mo,number-of-connected-components-in-an-undirected-graph,Number of Connected Components in an Undirected Graph,Medium,100.0
+liquidslr,2025-06-01,GM,>6mo,number-of-connected-components-in-an-undirected-graph,Number of Connected Components in an Undirected Graph,Medium,100.0
+liquidslr,2025-06-01,GM,all,number-of-connected-components-in-an-undirected-graph,Number of Connected Components in an Undirected Graph,Medium,100.0
+liquidslr,2025-06-20,GM,30d,number-of-connected-components-in-an-undirected-graph,Number of Connected Components in an Undirected Graph,Medium,100.0
+liquidslr,2025-06-20,GM,3mo,number-of-connected-components-in-an-undirected-graph,Number of Connected Components in an Undirected Graph,Medium,100.0
+liquidslr,2025-06-20,GM,6mo,number-of-connected-components-in-an-undirected-graph,Number of Connected Components in an Undirected Graph,Medium,100.0
+liquidslr,2025-06-20,GM,>6mo,number-of-connected-components-in-an-undirected-graph,Number of Connected Components in an Undirected Graph,Medium,100.0
+liquidslr,2025-06-20,GM,all,number-of-connected-components-in-an-undirected-graph,Number of Connected Components in an Undirected Graph,Medium,100.0
+snehasishroy,2025-07-12,GM,30d,number-of-connected-components-in-an-undirected-graph,Number of Connected Components in an Undirected Graph,Medium,100.0
+snehasishroy,2025-07-12,GM,3mo,number-of-connected-components-in-an-undirected-graph,Number of Connected Components in an Undirected Graph,Medium,100.0
+snehasishroy,2025-07-12,GM,6mo,number-of-connected-components-in-an-undirected-graph,Number of Connected Components in an Undirected Graph,Medium,100.0
+snehasishroy,2025-07-12,GM,>6mo,number-of-connected-components-in-an-undirected-graph,Number of Connected Components in an Undirected Graph,Medium,100.0
+snehasishroy,2025-07-12,GM,all,number-of-connected-components-in-an-undirected-graph,Number of Connected Components in an Undirected Graph,Medium,100.0
+snehasishroy,2025-11-22,GM,3mo,number-of-connected-components-in-an-undirected-graph,Number of Connected Components in an Undirected Graph,Medium,100.0
+snehasishroy,2025-11-22,GM,6mo,number-of-connected-components-in-an-undirected-graph,Number of Connected Components in an Undirected Graph,Medium,100.0
+snehasishroy,2025-11-22,GM,>6mo,number-of-connected-components-in-an-undirected-graph,Number of Connected Components in an Undirected Graph,Medium,100.0
+snehasishroy,2025-11-22,GM,all,number-of-connected-components-in-an-undirected-graph,Number of Connected Components in an Undirected Graph,Medium,100.0
+snehasishroy,2026-02-21,GM,6mo,number-of-connected-components-in-an-undirected-graph,Number of Connected Components in an Undirected Graph,Medium,100.0
+snehasishroy,2026-02-21,GM,>6mo,number-of-connected-components-in-an-undirected-graph,Number of Connected Components in an Undirected Graph,Medium,100.0
+snehasishroy,2026-02-21,GM,all,number-of-connected-components-in-an-undirected-graph,Number of Connected Components in an Undirected Graph,Medium,100.0
+snehasishroy,2026-05-24,GM,>6mo,number-of-connected-components-in-an-undirected-graph,Number of Connected Components in an Undirected Graph,Medium,100.0
+snehasishroy,2026-05-24,GM,all,number-of-connected-components-in-an-undirected-graph,Number of Connected Components in an Undirected Graph,Medium,100.0
+liquidslr,2026-06-25,GM,>6mo,number-of-connected-components-in-an-undirected-graph,Number of Connected Components in an Undirected Graph,Medium,100.0
+liquidslr,2026-06-25,GM,all,number-of-connected-components-in-an-undirected-graph,Number of Connected Components in an Undirected Graph,Medium,100.0
+snehasishroy,2026-07-12,GM,>6mo,number-of-connected-components-in-an-undirected-graph,Number of Connected Components in an Undirected Graph,Medium,100.0
+snehasishroy,2026-07-12,GM,all,number-of-connected-components-in-an-undirected-graph,Number of Connected Components in an Undirected Graph,Medium,100.0
+liquidslr,2026-08-16,GM,>6mo,number-of-connected-components-in-an-undirected-graph,Number of Connected Components in an Undirected Graph,Medium,100.0
+liquidslr,2026-08-16,GM,all,number-of-connected-components-in-an-undirected-graph,Number of Connected Components in an Undirected Graph,Medium,100.0
+snehasishroy,2026-02-21,GM,30d,number-of-steps-to-reduce-a-number-in-binary-representation-to-one,Number of Steps to Reduce a Number in Binary Representation to One,Medium,100.0
+snehasishroy,2026-02-21,GM,3mo,number-of-steps-to-reduce-a-number-in-binary-representation-to-one,Number of Steps to Reduce a Number in Binary Representation to One,Medium,100.0
+snehasishroy,2026-02-21,GM,6mo,number-of-steps-to-reduce-a-number-in-binary-representation-to-one,Number of Steps to Reduce a Number in Binary Representation to One,Medium,100.0
+snehasishroy,2026-02-21,GM,all,number-of-steps-to-reduce-a-number-in-binary-representation-to-one,Number of Steps to Reduce a Number in Binary Representation to One,Medium,62.5
+snehasishroy,2026-05-24,GM,6mo,number-of-steps-to-reduce-a-number-in-binary-representation-to-one,Number of Steps to Reduce a Number in Binary Representation to One,Medium,100.0
+snehasishroy,2026-05-24,GM,all,number-of-steps-to-reduce-a-number-in-binary-representation-to-one,Number of Steps to Reduce a Number in Binary Representation to One,Medium,62.5
+liquidslr,2026-06-25,GM,6mo,number-of-steps-to-reduce-a-number-in-binary-representation-to-one,Number of Steps to Reduce a Number in Binary Representation to One,Medium,100.0
+liquidslr,2026-06-25,GM,>6mo,number-of-steps-to-reduce-a-number-in-binary-representation-to-one,Number of Steps to Reduce a Number in Binary Representation to One,Medium,53.0
+liquidslr,2026-06-25,GM,all,number-of-steps-to-reduce-a-number-in-binary-representation-to-one,Number of Steps to Reduce a Number in Binary Representation to One,Medium,68.6
+snehasishroy,2026-07-12,GM,6mo,number-of-steps-to-reduce-a-number-in-binary-representation-to-one,Number of Steps to Reduce a Number in Binary Representation to One,Medium,100.0
+snehasishroy,2026-07-12,GM,>6mo,number-of-steps-to-reduce-a-number-in-binary-representation-to-one,Number of Steps to Reduce a Number in Binary Representation to One,Medium,50.0
+snehasishroy,2026-07-12,GM,all,number-of-steps-to-reduce-a-number-in-binary-representation-to-one,Number of Steps to Reduce a Number in Binary Representation to One,Medium,62.5
+liquidslr,2026-08-16,GM,>6mo,number-of-steps-to-reduce-a-number-in-binary-representation-to-one,Number of Steps to Reduce a Number in Binary Representation to One,Medium,65.5
+liquidslr,2026-08-16,GM,all,number-of-steps-to-reduce-a-number-in-binary-representation-to-one,Number of Steps to Reduce a Number in Binary Representation to One,Medium,69.0
+snehasishroy,2026-02-21,GM,all,serialize-and-deserialize-binary-tree,Serialize and Deserialize Binary Tree,Hard,50.0
+snehasishroy,2026-05-24,GM,all,serialize-and-deserialize-binary-tree,Serialize and Deserialize Binary Tree,Hard,50.0
+liquidslr,2026-06-25,GM,all,serialize-and-deserialize-binary-tree,Serialize and Deserialize Binary Tree,Hard,51.6
+snehasishroy,2026-07-12,GM,all,serialize-and-deserialize-binary-tree,Serialize and Deserialize Binary Tree,Hard,50.0
+liquidslr,2026-08-16,GM,>6mo,serialize-and-deserialize-binary-tree,Serialize and Deserialize Binary Tree,Hard,52.8
+liquidslr,2026-08-16,GM,all,serialize-and-deserialize-binary-tree,Serialize and Deserialize Binary Tree,Hard,51.8
+liquidslr,2025-03-21,GM,>6mo,the-number-of-full-rounds-you-have-played,The Number of Full Rounds You Have Played,Medium,89.6
+liquidslr,2025-03-21,GM,all,the-number-of-full-rounds-you-have-played,The Number of Full Rounds You Have Played,Medium,62.8
+liquidslr,2025-04-11,GM,>6mo,the-number-of-full-rounds-you-have-played,The Number of Full Rounds You Have Played,Medium,78.9
+liquidslr,2025-04-11,GM,all,the-number-of-full-rounds-you-have-played,The Number of Full Rounds You Have Played,Medium,61.8
+liquidslr,2025-05-13,GM,>6mo,the-number-of-full-rounds-you-have-played,The Number of Full Rounds You Have Played,Medium,75.6
+liquidslr,2025-05-13,GM,all,the-number-of-full-rounds-you-have-played,The Number of Full Rounds You Have Played,Medium,60.0
+liquidslr,2025-06-01,GM,>6mo,the-number-of-full-rounds-you-have-played,The Number of Full Rounds You Have Played,Medium,72.7
+liquidslr,2025-06-01,GM,all,the-number-of-full-rounds-you-have-played,The Number of Full Rounds You Have Played,Medium,59.0
+liquidslr,2025-06-20,GM,>6mo,the-number-of-full-rounds-you-have-played,The Number of Full Rounds You Have Played,Medium,70.6
+liquidslr,2025-06-20,GM,all,the-number-of-full-rounds-you-have-played,The Number of Full Rounds You Have Played,Medium,56.8
+snehasishroy,2025-07-12,GM,>6mo,the-number-of-full-rounds-you-have-played,The Number of Full Rounds You Have Played,Medium,75.0
+snehasishroy,2025-07-12,GM,all,the-number-of-full-rounds-you-have-played,The Number of Full Rounds You Have Played,Medium,50.0
+liquidslr,2025-03-21,GM,6mo,widest-vertical-area-between-two-points-containing-no-points,Widest Vertical Area Between Two Points Containing No Points,Easy,68.7
+liquidslr,2025-03-21,GM,all,widest-vertical-area-between-two-points-containing-no-points,Widest Vertical Area Between Two Points Containing No Points,Easy,62.8
+liquidslr,2025-04-11,GM,all,widest-vertical-area-between-two-points-containing-no-points,Widest Vertical Area Between Two Points Containing No Points,Easy,61.8
+liquidslr,2025-05-13,GM,all,widest-vertical-area-between-two-points-containing-no-points,Widest Vertical Area Between Two Points Containing No Points,Easy,60.0
+liquidslr,2025-06-01,GM,all,widest-vertical-area-between-two-points-containing-no-points,Widest Vertical Area Between Two Points Containing No Points,Easy,59.0
+liquidslr,2025-06-20,GM,all,widest-vertical-area-between-two-points-containing-no-points,Widest Vertical Area Between Two Points Containing No Points,Easy,56.8
+snehasishroy,2025-07-12,GM,all,widest-vertical-area-between-two-points-containing-no-points,Widest Vertical Area Between Two Points Containing No Points,Easy,50.0
+snehasishroy,2025-11-22,GM,>6mo,widest-vertical-area-between-two-points-containing-no-points,Widest Vertical Area Between Two Points Containing No Points,Easy,62.5
+snehasishroy,2025-11-22,GM,all,widest-vertical-area-between-two-points-containing-no-points,Widest Vertical Area Between Two Points Containing No Points,Easy,50.0
+snehasishroy,2026-02-21,GM,>6mo,widest-vertical-area-between-two-points-containing-no-points,Widest Vertical Area Between Two Points Containing No Points,Easy,50.0
+snehasishroy,2026-02-21,GM,all,widest-vertical-area-between-two-points-containing-no-points,Widest Vertical Area Between Two Points Containing No Points,Easy,50.0
+snehasishroy,2026-05-24,GM,>6mo,widest-vertical-area-between-two-points-containing-no-points,Widest Vertical Area Between Two Points Containing No Points,Easy,50.0
+snehasishroy,2026-05-24,GM,all,widest-vertical-area-between-two-points-containing-no-points,Widest Vertical Area Between Two Points Containing No Points,Easy,50.0
+liquidslr,2026-06-25,GM,>6mo,widest-vertical-area-between-two-points-containing-no-points,Widest Vertical Area Between Two Points Containing No Points,Easy,53.0
+liquidslr,2026-06-25,GM,all,widest-vertical-area-between-two-points-containing-no-points,Widest Vertical Area Between Two Points Containing No Points,Easy,51.6
+snehasishroy,2026-07-12,GM,>6mo,widest-vertical-area-between-two-points-containing-no-points,Widest Vertical Area Between Two Points Containing No Points,Easy,50.0
+snehasishroy,2026-07-12,GM,all,widest-vertical-area-between-two-points-containing-no-points,Widest Vertical Area Between Two Points Containing No Points,Easy,50.0
+liquidslr,2026-08-16,GM,>6mo,widest-vertical-area-between-two-points-containing-no-points,Widest Vertical Area Between Two Points Containing No Points,Easy,52.8
+liquidslr,2026-08-16,GM,all,widest-vertical-area-between-two-points-containing-no-points,Widest Vertical Area Between Two Points Containing No Points,Easy,51.8
