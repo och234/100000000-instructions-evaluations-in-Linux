@@ -1,133 +1,124 @@
-# GM (AV / Embodied AI ML Infra): Top 10 Coding Questions to Expect
+# GM Embodied AI ML Infra (ex-Cruise) Screen: Top 10 Coding Questions
 
-Tested reference solutions for all ten are in [`gm_top10.py`](gm_top10.py). Run `python3 gm_top10.py` to check them.
+**Target:** The 1-hour "Technical/Functional Assessment" screen for *Senior ML Infrastructure Engineer, Embodied AI Scaling Foundations* (JR-202601904). The screen runs live on Codility, and the team is the former Cruise group now inside GM.
 
-## How this list was built
+**Ranked by:** How often each question was asked, combined with how recently. Run [`score_questions.py`](score_questions.py) to reproduce the ranking.
 
-Each question is ranked by how much evidence points to it, not by how hard it is.
+**Solutions:** Tested solutions for all ten, plus the wildcard, are in [`gm_top10.py`](gm_top10.py). Run `python3 gm_top10.py`; the run includes brute-force cross-checks.
 
-1. **GM's LeetCode company tag.** These are community snapshots of LeetCode Premium frequency data, last updated mid-2025.
-2. **Cruise's tag and Cruise screen reports.** GM moved Cruise's AV engineering into GM in 2025, so the AV and embodied-AI interview loop comes largely from Cruise.
-3. **Glassdoor, Blind, and Jointaro reports for GM SWE and AV roles.** Candidates describe several LeetCode-style rounds, mostly medium difficulty. A January 2026 senior SWE report described six rounds, and three of them were coding.
-4. **What the role's day-to-day work suggests.** Expect DAGs and pipelines, time windows, grids and maps, and caches.
+## The ranking (as of 2026-10-19, recency half-life 365 days)
 
-| # | Problem | LC | Pattern | Evidence |
-|---|---------|----|---------|----------|
-| 1 | Merge Intervals | [56](https://leetcode.com/problems/merge-intervals) | Sort + sweep | GM tag (most recent, 6-mo window); Cruise |
-| 2 | Number of Connected Components in an Undirected Graph | [323](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph) | Union-Find / BFS | GM tag #1 all-time |
-| 3 | LRU Cache | [146](https://leetcode.com/problems/lru-cache) | Hashmap + DLL | GM tag; Glassdoor (infotainment) |
-| 4 | Minimum Path Sum → weighted grid w/ obstacles | [64](https://leetcode.com/problems/minimum-path-sum) → [1631](https://leetcode.com/problems/path-with-minimum-effort) | DP → Dijkstra | GM tag; Jointaro; Cruise "weighted traversal cost" |
-| 5 | Course Schedule I/II | [207](https://leetcode.com/problems/course-schedule)/[210](https://leetcode.com/problems/course-schedule-ii) | Topological sort | Cruise tag |
-| 6 | Robot grid simulation (turn right when blocked; stop at goal or loop) | ~[874](https://leetcode.com/problems/walking-robot-simulation)/[1041](https://leetcode.com/problems/robot-bounded-in-circle)/[489](https://leetcode.com/problems/robot-room-cleaner) | Simulation + state cycle detection | Cruise screen (Interview Query) |
-| 7 | Implement Trie | [208](https://leetcode.com/problems/implement-trie-prefix-tree) | Trie | GM tag |
-| 8 | Dot Product of Two Sparse Vectors | [1570](https://leetcode.com/problems/dot-product-of-two-sparse-vectors) | Two pointers / hashmap | GM tag |
-| 9 | Synonymous Sentences | [1258](https://leetcode.com/problems/synonymous-sentences) | Union-Find + backtracking | Cruise tag #1 |
-| 10 | Serialize and Deserialize Binary Tree | [297](https://leetcode.com/problems/serialize-and-deserialize-binary-tree) | Preorder + null markers | GM tag (Hard) |
+| # | Question | Source | Est. last asked | Freq | Recency | Score | Rank at 180/365/730-day half-life |
+|---|---|---|---|---|---|---|---|
+| 1 | [Number of Connected Components in an Undirected Graph (323)](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph) | GM | 2025-11 | 1.00 | 0.53 | 0.533 | 4 / 1 / 1 |
+| 2 | [Number of Steps to Reduce a Number in Binary Representation to One (1404)](https://leetcode.com/problems/number-of-steps-to-reduce-a-number-in-binary-representation-to-one) | GM | 2026-04 | 0.68 | 0.70 | 0.473 | 1 / 2 / 2 |
+| 3 | [Maximum Sum of 3 Non-Overlapping Subarrays (689)](https://leetcode.com/problems/maximum-sum-of-3-non-overlapping-subarrays), Hard | GM | 2026-04 | 0.65 | 0.70 | 0.456 | 2 / 3 / 3 |
+| 4 | [Merge Intervals (56)](https://leetcode.com/problems/merge-intervals) | GM + Cruise | 2026-05 | 0.56 | 0.75 | 0.418 | 3 / 4 / 5 |
+| 5 | [Minimum Path Sum (64)](https://leetcode.com/problems/minimum-path-sum) | GM | 2025-09 | 0.80 | 0.46 | 0.367 | 6 / 5 / 4 |
+| 6 | [LRU Cache (146)](https://leetcode.com/problems/lru-cache) | GM + Cruise | 2025-09 | 0.71 | 0.46 | 0.326 | 7 / 6 / 6 |
+| 7 | [Minimum Deletions to Make Character Frequencies Unique (1647)](https://leetcode.com/problems/minimum-deletions-to-make-character-frequencies-unique) | GM | 2026-04 | 0.41 | 0.70 | 0.282 | 5 / 7 / 10 |
+| 8 | [Course Schedule I/II (207/210)](https://leetcode.com/problems/course-schedule) | Cruise | 2025-04 | 0.76 | 0.35 | 0.264 | 9 / 8 / 7 |
+| 9 | [Implement Trie (208)](https://leetcode.com/problems/implement-trie-prefix-tree) | GM + Cruise | 2025-08 | 0.56 | 0.45 | 0.250 | 8 / 9 / 8 |
+| 10 | [Synonymous Sentences (1258)](https://leetcode.com/problems/synonymous-sentences) | Cruise | 2024-10 | 0.72 | 0.25 | 0.180 | 10 / 10 / 9 |
 
-**Next five, if you have time:**
-- [First Missing Positive (41)](https://leetcode.com/problems/first-missing-positive)
-- [Maximum Sum of 3 Non-Overlapping Subarrays (689)](https://leetcode.com/problems/maximum-sum-of-3-non-overlapping-subarrays)
-- [Gas Station (134)](https://leetcode.com/problems/gas-station) (a variant was reported on Glassdoor)
-- [Word Ladder (127)](https://leetcode.com/problems/word-ladder) (Cruise)
-- [Maximum Number of Events That Can Be Attended (1353)](https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended) (Cruise)
+- **Stability:** The same ten questions make up the top 10 at every half-life from 180 to 730 days. Only their order changes.
+- **Just outside the top 10:** Widest Vertical Area (1637), Guess the Word (843), Serialize/Deserialize Binary Tree (297), and Dot Product of Sparse Vectors (1570).
 
----
+### Wildcard: outside the formula, but rehearse it once
 
-## Per-question notes: likely AV/ML-infra twist and follow-ups
+**In-memory key-value store with nested, isolated transactions** (begin / set / get / delete / commit / rollback).
 
-### 1. Merge Intervals
-- **Twist:** Merge overlapping time windows from drive logs, such as disengagements, sensor dropouts, or GPU reservation windows.
-- **Follow-ups:**
-  - The intervals arrive as a stream. Keep a sorted structure, or bisect into a list.
-  - Insert one new interval ([LC 57](https://leetcode.com/problems/insert-interval)).
-  - Find the free gaps between intervals ([LC 759](https://leetcode.com/problems/employee-free-time)).
-  - What is the most windows open at the same time? Use a sweep line or a heap ([LC 253](https://leetcode.com/problems/meeting-rooms-ii)).
-- **Complexity:** O(n log n).
+- **Where it ranks:** #28 by the formula. Its last report is from 2021, so recency pulls it down.
+- **Why rehearse it anyway:** It is the most-reported *1-hour Cruise screen* question. There are three reports:
+  - a 2021 phone screen
+  - a 2021 senior tech assessment, where the candidate failed on a missing deep copy
+  - a 2019 onsite "Transactional Map"
+- **Fit for this screen:** The team is ex-Cruise and the round is 1 hour, so it fits well. It is also already in your notes, so one timed run is enough.
 
-### 2. Number of Connected Components
-- **Twist:** Cluster lidar points that sit within distance *d* of each other, or count connected subgraphs in a service or dataset dependency graph.
-- **Follow-ups:**
-  - Edges arrive online. Union-Find handles this naturally ([LC 305](https://leetcode.com/problems/number-of-islands-ii)).
-  - Explain path compression plus union by rank or size, and the α(n) bound.
-  - Compare BFS and DFS against Union-Find on space use and on how each handles dynamic edges.
+## How the score works
 
-### 3. LRU Cache
-- **Twist:** A cache of model artifacts or feature shards.
-- **Follow-ups:**
-  - Per-entry TTL.
-  - Capacity counted in bytes rather than entries.
-  - Thread safety. Start with one lock, then talk about lock striping.
-  - LFU instead of LRU ([LC 460](https://leetcode.com/problems/lfu-cache)).
-- **What they check:** Write the doubly linked list yourself. `OrderedDict` is fine to *mention*, but not to submit.
+**Data**
 
-### 4. Minimum Path Sum, then a weighted grid with obstacles
-- **Start:** With right/down moves only, a 1-D DP solves it in O(mn) time and O(n) space.
-- **Twist:** Allow 4-directional moves, add obstacles, and give each cell a terrain cost. Now it is Dijkstra, O(mn log mn). The Cruise version of this asks for the "shortest collision-free path with dynamic obstacles."
-- **Follow-ups:**
-  - A* with a Manhattan heuristic.
-  - An unknown map (Robot Room Cleaner / [LC 1778](https://leetcode.com/problems/shortest-path-in-a-hidden-grid)).
-  - Obstacles that change over time. Add time to the state.
+- **Tag snapshots:** 19 dated snapshots of the GM and Cruise LeetCode company-tag lists, from 2020-08 to 2026-08. They come from the git history of four community repos, extracted by [`data/extract_tag_snapshots.py`](data/extract_tag_snapshots.py) into [`data/tag_snapshots.csv`](data/tag_snapshots.csv).
+- **Candidate reports:** 24 GM and Cruise reports from Glassdoor, Jointaro, LeetCode Discuss, Blind and 1point3acres, dated where possible, in [`data/reports.csv`](data/reports.csv).
 
-### 5. Course Schedule I/II
-- **Twist:** This is the closest match to the ML-infra role. Schedule training or eval pipeline stages that depend on each other, and reject DAGs that contain a cycle.
-- **Follow-ups:**
-  - Each task has a duration and you have unlimited workers. Find the critical path ([LC 1136](https://leetcode.com/problems/parallel-courses), [LC 2050](https://leetcode.com/problems/parallel-courses-iii)).
-  - You have only *k* workers. Use a priority queue simulation.
-  - Report *which* cycle blocks the schedule. Use DFS with three colors.
+**Per-question formula**
 
-### 6. Robot grid simulation
-- **Setup:** The robot starts at (0,0) facing east. It moves forward if it can, and turns right otherwise. Return its path until it reaches the goal or starts repeating.
-- **Key insight:** A loop means a repeated *(row, col, heading)* state, not just a repeated cell. There are at most 4·R·C states, which bounds the run.
-- **Follow-ups:**
-  - Count how many distinct cells it cleans ([LC 2061](https://leetcode.com/problems/number-of-spaces-cleaning-robot-cleaned)).
-  - Let it turn left as well.
-  - Run several robots at once and handle collisions.
+- **Est. last asked:** Each snapshot puts a question inside a time window (30 days, 3 months, 6 months, 1 year or 2 years). Take the midpoint of each window and keep the latest one, or a later dated report if there is one.
+- **Recency:** `0.5 ^ (age_days / 365)`.
+- **Frequency:** `0.5 * LeetCode within-company frequency (normalized) + 0.5 * repeat appearances (log-scaled)`.
+- **Score:** `frequency * recency`.
 
-### 7. Implement Trie
-- **Twist:** Prefix search over ROS topic names, log paths, or dataset keys.
-- **Follow-ups:**
-  - Autocomplete the top *k* by frequency. Cache the top *k* at each node.
-  - Wildcard search ([LC 211](https://leetcode.com/problems/design-add-and-search-words-data-structure)).
-  - Delete.
-  - Memory: dict children compared with fixed arrays.
+**Caveats**
 
-### 8. Sparse Vector Dot Product
-- **Twist:** Sparse feature vectors or embeddings.
-- **Follow-ups:**
-  - One vector is dense and one is sparse. Iterate over the sparse side only.
-  - The two vectors differ greatly in size. Binary-search into the larger one for O(k_small · log k_large).
-  - Why store sorted pairs instead of a hashmap? Hashing has a cost, and sorted pairs give better locality.
+- **GM's tag covers every GM team**, including IT and infotainment, not only the AV team. Cruise's tag is the team's own history, but it is older. Neither one is "this interviewer's question bank."
+- **Questions seen only in all-time lists** get an assumed last-asked date (first seen minus one year).
+- **Undated reports** are treated as three years old.
 
-### 9. Synonymous Sentences
-- **Approach:** Use Union-Find to group synonyms, sort each group, then backtrack over the word positions.
-- **Follow-ups:**
-  - The output grows exponentially. Talk about streaming results through a generator.
-  - Return only the count of sentences, which is a product of group sizes.
+## What to prepare for each question
 
-### 10. Serialize / Deserialize Binary Tree
-- **Follow-ups:**
-  - Make it iterative so very deep trees don't overflow the recursion stack. The reference solution does this.
-  - BST-only variant: no null markers are needed ([LC 449](https://leetcode.com/problems/serialize-and-deserialize-bst)).
-  - N-ary trees ([LC 428](https://leetcode.com/problems/serialize-and-deserialize-n-ary-tree)).
-  - Use a compact binary format instead of strings.
+The bullet under each question is the ML-infra follow-up the interviewer is likely to push toward.
 
----
+1. **Connected Components (323).** Union-Find with path compression and union by size, about O(E·α(V)).
+   - *Infra twist:* Edges arrive online, as in [305](https://leetcode.com/problems/number-of-islands-ii). Or cluster sensor points that sit within distance d of each other.
+2. **Steps to Reduce Binary to One (1404).** Scan right to left with a carry. An odd bit adds 2 steps and sets carry=1; an even bit adds 1 step. O(n), with no big-int conversion.
+   - *Twist:* The string has 10⁶ bits. Explain why `int(s, 2)` with simulation becomes O(n²).
+3. **Max Sum of 3 Non-Overlapping Subarrays (689).** Compute window sums. Build a best-left argmax array (strict `>`) and a best-right argmax array (`>=`) so ties go to the leftmost index. Then sweep the middle window. O(n).
+   - *Twist:* Generalize to m windows with an O(n·m) DP.
+4. **Merge Intervals (56).** Sort, then sweep.
+   - *Twist:* Intervals arrive as a stream or out of order ([352](https://leetcode.com/problems/data-stream-as-disjoint-intervals), [715](https://leetcode.com/problems/range-module)).
+   - Other follow-ups: [Insert Interval (57)](https://leetcode.com/problems/insert-interval), and the peak number of concurrent jobs ([Meeting Rooms II, 253](https://leetcode.com/problems/meeting-rooms-ii)).
+5. **Minimum Path Sum (64).** 1-D DP.
+   - *Twist:* 4-directional moves with obstacles and weighted cells make it Dijkstra (`min_cost_path`). A* is the next step.
+6. **LRU Cache (146).** Hashmap plus a doubly linked list you write yourself. A 2020 Cruise screen disallowed `OrderedDict`.
+   - *Twist:* Per-entry TTL; capacity in bytes; thread safety (one lock, then striping); [LFU (460)](https://leetcode.com/problems/lfu-cache).
+7. **Min Deletions for Unique Frequencies (1647).** Count characters, sort the counts descending, and decrement each one until it reaches an unused count. 0 is always allowed.
+8. **Course Schedule I/II (207/210).** Kahn's algorithm; a cycle means no valid order.
+   - *Twist:* A pipeline DAG where each stage has a duration. The makespan is the critical path ([2050](https://leetcode.com/problems/parallel-courses-iii)); see `min_makespan`. Next, *k* workers, simulated with a heap.
+9. **Implement Trie (208).** Nested dicts with an end marker.
+   - *Twist:* Top-k autocomplete ([642](https://leetcode.com/problems/design-search-autocomplete-system)) and wildcard search ([211](https://leetcode.com/problems/design-add-and-search-words-data-structure)).
+10. **Synonymous Sentences (1258).** Union-Find to group synonyms, sort each group, backtrack over word positions, then sort the output.
+    - *Twist:* Return only the count, which is the product of group sizes.
 
-## How to run the coding rounds (senior/staff bar)
+**Wildcard: nested-transaction KV store**
 
-- **Clarify first.** Ask about input size, whether data arrives as a stream or a batch, what invalid input looks like, and which output order is required. AV interviewers look for this habit.
-- **Say the complexity before you code.** Once the code passes, name the next bottleneck and how you would fix it.
-- **Write your own small tests as you go.** Cover empty input, a single element, duplicates, a cycle, and an unreachable target.
-- **Expect a follow-up that moves into infrastructure.** Common ones: what changes if the data doesn't fit in memory, if it arrives from many producers, or if it needs to be thread-safe.
-- **Prepare in both Python and C++.** Python is the default for ML infra. C++ came up in GM's embedded and AV loops, so confirm the language with your recruiter.
+- **Design:** Keep a stack of dict layers and mark deletes with a tombstone. `commit` merges the innermost layer into its parent; `rollback` pops it. `get` is O(depth).
+- **Say your commit semantics out loud.** Ask whether `commit` merges one level or flushes every level.
+- **Follow-up:** Make `get` O(1) with an undo log.
+- **Watch for the failure seen in the 2021 report:** copying instead of layering, or using a shallow copy.
+
+## The 1-hour live Codility format
+
+- **Run your code early and often.** Codility Interview lets you run code as many times as you like and add your own test cases. Python 3.12 is supported for algorithmic tasks.
+- **Assume hidden tests:** If the session uses library tasks, hidden tests can also check performance against Big-O, so state complexity before you code.
+- **AI tools may be enabled:** Interviewers can switch AI tools on for an interview. If they are on, review every line the AI suggests before accepting it.
+- **Time:** Plan for one medium-hard problem with follow-ups, or two mediums.
+- **"Functional" topics may fill the rest of the hour:**
+  - your ML evaluation platform end to end, including lineage
+  - DAG orchestration with idempotent retries
+  - GPU job scheduling and utilization
+  - caching dataset shards and artifacts
+  - Python details: GIL, generators, and shallow vs deep copy
 
 ## Sources
 
-- [LeetCode company-wise problem lists (General Motors and Cruise folders)](https://github.com/liquidslr/leetcode-company-wise-problems)
-- [Glassdoor: GM Senior Software Engineer interview reports](https://www.glassdoor.com/Interview/General-Motors-GM-Senior-Software-Engineer-Interview-Questions-EI_IE279.0,17_KO18,42.htm)
-- [Interview Query: Cruise Software Engineer guide (robot grid question)](https://www.interviewquery.com/interview-guides/cruise-software-engineer)
-- [Dataford: Cruise Software Engineer guide (weighted and dynamic-obstacle grid paths)](https://dataford.io/interview-guides/cruise/software-engineer)
-- [Dataford: GM Software Engineer guide](https://dataford.io/interview-guides/general-motors-gm/software-engineer)
-- [Jointaro: GM Senior SWE experience, Sept 2025 (minimum path sum)](https://www.jointaro.com/interviews/companies/general-motors/experiences/senior-software-engineer-united-states-september-1-2025-declined-offer-negative-d625bc6c/)
-- [Blind: GM interview discussions (AV org coding round is LeetCode-style)](https://www.teamblind.com/company/General-Motors/posts/general-motors-interview)
-- [GM job posting: AV ML Infrastructure (team scope: Embodied AI, simulation)](https://www.themuse.com/jobs/generalmotors/2026-summer-intern-aiml-engineer-av-ml-infrastructure-bachelors)
+- **Tag data repos:**
+  - [liquidslr/leetcode-company-wise-problems](https://github.com/liquidslr/leetcode-company-wise-problems)
+  - [snehasishroy/leetcode-companywise-interview-questions](https://github.com/snehasishroy/leetcode-companywise-interview-questions)
+  - [krishnadey30/LeetCode-Questions-CompanyWise](https://github.com/krishnadey30/LeetCode-Questions-CompanyWise)
+  - [hxu296/leetcode-company-wise-problems-2022](https://github.com/hxu296/leetcode-company-wise-problems-2022)
+- **GM candidate reports:**
+  - [Jointaro, Apr 2025](https://www.jointaro.com/interviews/companies/general-motors/experiences/software-engineer-united-states-april-1-2025-no-offer-neutral-a5196136/)
+  - [Jointaro, Aug 2025](https://www.jointaro.com/interviews/companies/general-motors/experiences/staff-software-engineer-sunnyvale-california-august-1-2025-no-offer-negative-44d7a066/)
+  - [Jointaro, Sept 2025](https://www.jointaro.com/interviews/companies/general-motors/experiences/senior-software-engineer-united-states-september-1-2025-declined-offer-negative-d625bc6c/)
+  - [Glassdoor GM, Jan 2026](https://www.glassdoor.com/Interview/General-Motors-GM-Interview-RVW80151828.htm)
+- **Cruise transactional KV store reports:**
+  - [LeetCode Discuss, 2021](https://leetcode.com/discuss/interview-question/1617100/phone-screen-cruise/)
+  - [Glassdoor Cruise Senior SWE](https://www.glassdoor.com/Interview/Cruise-Senior-Software-Engineer-Interview-Questions-EI_IE977351.0,6_KO7,31.htm)
+  - [LeetCode Discuss, 2019](https://leetcode.com/discuss/interview-question/421107/cruise-automation-onsite-transactional-map/)
+- **Codility:**
+  - [Candidate interface](https://support.codility.com/hc/en-us/articles/360043827893-Candidate-Interface)
+  - [Scoring](https://support.codility.com/hc/en-us/articles/360043318374)
+  - [Supported technologies](https://support.codility.com/hc/en-us/articles/360043823713-What-technologies-does-Codility-support)
+  - [AI in interviews](https://www.codility.com/ai-info/)
+- **Every report used in the score:** listed with its URL in [`data/reports.csv`](data/reports.csv).

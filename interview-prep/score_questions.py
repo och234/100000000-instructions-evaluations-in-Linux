@@ -32,7 +32,7 @@ from datetime import date, timedelta
 HERE = os.path.dirname(os.path.abspath(__file__))
 WINDOW_DAYS = {"30d": 30, "3mo": 91, "6mo": 182, "1y": 365, "2y": 730}
 UNTIMED_ASSUMED_LAG = timedelta(days=365)
-UNKNOWN_REPORT_AGE = timedelta(days=730)
+UNKNOWN_REPORT_AGE = timedelta(days=1095)
 SENSITIVITY_HALF_LIVES = (180, 365, 730)
 
 
@@ -95,7 +95,7 @@ def build_features(today: date):
 
     for item in q.values():
         if item["last_ask"] is None:
-            # untimed tag lists only: assume ~1y before first seen; undated reports only: 2y ago
+            # untimed tag lists only: assume ~1y before first seen; undated reports only: 3y ago
             item["last_ask"] = (item["first_seen"] - UNTIMED_ASSUMED_LAG if item["first_seen"]
                                 else today - UNKNOWN_REPORT_AGE)
         freqs = [v for _, v in item["freq_by_dataset"].values()]
