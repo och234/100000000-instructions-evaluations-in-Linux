@@ -92,6 +92,28 @@ The bullet under each question is the ML-infra follow-up the interviewer is like
 - **Follow-up:** Make `get` O(1) with an undo log.
 - **Watch for the failure seen in the 2021 report:** copying instead of layering, or using a shallow copy.
 
+## Minimum Path Sum (#5): follow-up prompts to rehearse
+
+GM reports from 2025 name only "Minimum Path Sum". The prompts below are the likely ways an interviewer would extend it, based on Dataford's Cruise prompts ("grid with weighted traversal costs", "collision-free path considering dynamic obstacles"). Every answer below was checked by running it.
+
+1. **4 directions, blocked cells, weighted cells.** "The vehicle can move up, down, left or right. Each cell's value is the cost to enter it, and the start cell counts. Cells marked -1 are blocked. Return the minimum cost from top-left to bottom-right, or -1 if unreachable."
+   - `[[1,9,1,1,1],[1,9,1,9,1],[1,1,1,9,1]]` → **11**. The right/down DP gives 15, because the best path has to go up.
+   - `[[1,1,1],[-1,-1,1],[1,1,1],[1,-1,-1],[1,1,1]]` → **11**.
+   - `[[1,-1],[-1,1]]` → **-1**.
+   - *Answer:* With moves in 4 directions the grid has cycles, so a DP has no fill order. Costs are non-negative, so use Dijkstra, O(mn log mn). See `min_cost_path`.
+2. **Return the path.** Store a parent pointer each time you relax a neighbor, then walk back from the target.
+3. **Obstacles that clear over time** ([LC 2577](https://leetcode.com/problems/minimum-time-to-visit-a-cell-in-a-grid)). "Each move takes 1 second. A cell can be entered only at time >= `grid[r][c]`, and you must keep moving. What is the earliest arrival time?"
+   - `[[0,1,3,2],[5,1,2,5],[4,3,8,6]]` → **7**.
+   - `[[0,2,4],[3,2,1],[1,0,4]]` → **-1**.
+   - *Answer:* Run Dijkstra on arrival time. If a cell isn't open yet, bounce back and forth to wait, so you arrive at `open + ((open - (t+1)) % 2)`.
+   - *Impossible case:* both `(0,1)` and `(1,0)` are greater than 1.
+4. **Probing questions:**
+   - Costs only 0 or 1 → 0-1 BFS.
+   - Negative costs → Bellman-Ford.
+   - Faster search → A* with heuristic Manhattan distance × smallest cell cost.
+   - Map doesn't fit in memory → load tiles lazily during the search.
+   - Many queries to the same target → one Dijkstra backwards from the target.
+
 ## The 1-hour live Codility format
 
 - **Run your code early and often.** Codility Interview lets you run code as many times as you like and add your own test cases. Python 3.12 is supported for algorithmic tasks.
