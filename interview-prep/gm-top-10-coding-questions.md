@@ -116,6 +116,12 @@ GM reports from 2025 name only "Minimum Path Sum". The prompts below are the lik
 
 ## Course Schedule (#7): follow-up prompts to rehearse
 
+**Evidence check:**
+- **Course Schedule (207) itself:** The only source is LeetCode's *Cruise* company tag. It appears in the 3-month window in [Mar 2025](https://github.com/liquidslr/leetcode-company-wise-problems/blob/15beb6a5d1536debb5051c2c01ba1a6ddc103107/Cruise/2.%20Three%20Months.csv) and in the 6-month window through [Jul 2025](https://github.com/snehasishroy/leetcode-companywise-interview-questions/blob/b4c547f8c16b4ea74d8d301caeb8cba46ee5be71/cruise-automation/six-months.csv). Tags are anonymous and give no role, team or round.
+- **Write-ups:** No first-hand report (Glassdoor, Blind, LeetCode Discuss, 1point3acres) names it for Cruise or GM.
+- **GM's tag:** It has never listed it.
+- **The follow-ups below:** None of them have been reported for GM or Cruise. They are my guesses at how an ML-infra interviewer would extend it.
+
 [207](https://leetcode.com/problems/course-schedule) and [210](https://leetcode.com/problems/course-schedule-ii) have **no durations**: each course is a node and each prerequisite is an edge. Follow-ups 1–5 keep that model. Only #6 adds hours, and at that point it is a different problem. Every answer below was checked by running it.
 
 1. **Return an order** (210). "Return any order that finishes all courses, or `[]` if that's impossible."
