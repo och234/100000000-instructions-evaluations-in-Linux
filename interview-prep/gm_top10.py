@@ -345,7 +345,61 @@ def can_finish(num_tasks: int, prerequisites: List[List[int]]) -> bool:
     return len(find_order(num_tasks, prerequisites)) == num_tasks
 
 
-# 7b. Follow-up (pipeline framing): every task has a duration, unlimited workers ->
+# 7b. Follow-up without durations: minimum number of stages if every job takes one
+#     stage and a stage runs any number of ready jobs (LC 1136 Parallel Courses).
+#     BFS level by level = longest chain counted in jobs. Returns -1 on a cycle. O(V + E).
+def min_stages(num_tasks: int, prerequisites: List[List[int]]) -> int:
+    graph = defaultdict(list)
+    indegree = [0] * num_tasks
+    for task, dep in prerequisites:
+        graph[dep].append(task)
+        indegree[task] += 1
+    level = [t for t in range(num_tasks) if indegree[t] == 0]
+    stages = done = 0
+    while level:
+        stages += 1
+        done += len(level)
+        nxt = []
+        for t in level:
+            for child in graph[t]:
+                indegree[child] -= 1
+                if indegree[child] == 0:
+                    nxt.append(child)
+        level = nxt
+    return stages if done == num_tasks else -1
+
+
+# 7c. Follow-up: report the cycle that blocks the schedule (iterative 3-color DFS).
+#     Returns [v, ..., u, v] following dependency -> task edges, or [] if acyclic.
+def find_cycle(num_tasks: int, prerequisites: List[List[int]]) -> List[int]:
+    graph = defaultdict(list)
+    for task, dep in prerequisites:
+        graph[dep].append(task)
+    color = [0] * num_tasks  # 0 = unvisited, 1 = on the DFS stack, 2 = finished
+    parent = [-1] * num_tasks
+    for start in range(num_tasks):
+        if color[start]:
+            continue
+        color[start] = 1
+        stack = [(start, iter(graph[start]))]
+        while stack:
+            u, children = stack[-1]
+            v = next(children, None)
+            if v is None:
+                color[u] = 2
+                stack.pop()
+            elif color[v] == 0:
+                color[v], parent[v] = 1, u
+                stack.append((v, iter(graph[v])))
+            elif color[v] == 1:  # back edge u -> v closes a cycle
+                cycle = [u]
+                while cycle[-1] != v:
+                    cycle.append(parent[cycle[-1]])
+                return cycle[::-1] + [v]
+    return []
+
+
+# 7d. Follow-up (pipeline framing): every task has a duration, unlimited workers ->
 #     minimum makespan = longest path in the DAG (LC 2050 Parallel Courses III). O(V + E).
 def min_makespan(durations: List[int], prerequisites: List[List[int]]) -> int:
     order = find_order(len(durations), prerequisites)
@@ -741,6 +795,22 @@ def _run_checks() -> None:
     assert len(order) == 4 and pos[0] < pos[1] < pos[3] and pos[0] < pos[2] < pos[3]
     assert find_order(2, [[0, 1], [1, 0]]) == [] and not can_finish(2, [[0, 1], [1, 0]])
     assert can_finish(3, []) and can_finish(0, [])
+    # LC 1136 examples (converted to 0-indexed [task, dependency])
+    assert min_stages(3, [[2, 0], [2, 1]]) == 2
+    assert min_stages(3, [[1, 0], [2, 1], [0, 2]]) == -1
+    for _ in range(2000):
+        n = rng.randint(1, 7)
+        pairs = [[rng.randrange(n), rng.randrange(n)] for _ in range(rng.randint(0, 10))]
+        acyclic = can_finish(n, pairs)
+        cycle = find_cycle(n, pairs)
+        assert (cycle == []) == acyclic and (min_stages(n, pairs) == -1) == (not acyclic)
+        edges = {(dep, task) for task, dep in pairs}
+        assert cycle == [] or (cycle[0] == cycle[-1] and all(e in edges for e in zip(cycle, cycle[1:])))
+        if acyclic:  # stages == longest chain (in jobs), computed independently
+            order, longest = find_order(n, pairs), {}
+            for t in order:
+                longest[t] = 1 + max((longest[d] for task, d in pairs if task == t), default=0)
+            assert min_stages(n, pairs) == max(longest.values())
     # LC 2050 examples, converted to 0-indexed [task, dependency] pairs
     assert min_makespan([3, 2, 5], [[2, 0], [2, 1]]) == 8
     assert min_makespan([1, 2, 3, 4, 5], [[4, 0], [4, 1], [4, 2], [3, 2], [4, 3]]) == 12

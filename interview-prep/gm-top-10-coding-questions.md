@@ -78,7 +78,7 @@ The bullet under each question is the ML-infra follow-up the interviewer is like
 6. **LRU Cache (146).** Hashmap plus a doubly linked list you write yourself. A 2020 Cruise screen disallowed `OrderedDict`.
    - *Twist:* Per-entry TTL; capacity in bytes; thread safety (one lock, then striping); [LFU (460)](https://leetcode.com/problems/lfu-cache).
 7. **Course Schedule I/II (207/210).** Kahn's algorithm; a cycle means no valid order.
-   - *Twist:* A pipeline DAG where each stage has a duration. The makespan is the critical path ([2050](https://leetcode.com/problems/parallel-courses-iii)); see `min_makespan`. Next, *k* workers, simulated with a heap.
+   - *Twist:* The no-durations follow-ups are the minimum number of stages ([1136](https://leetcode.com/problems/parallel-courses)) and reporting the cycle. Durations turn it into a different problem ([2050](https://leetcode.com/problems/parallel-courses-iii)). See the follow-up prompts below.
 8. **Min Deletions for Unique Frequencies (1647).** Count characters, sort the counts descending, and decrement each one until it reaches an unused count. 0 is always allowed.
 9. **Implement Trie (208).** Nested dicts with an end marker.
    - *Twist:* Top-k autocomplete ([642](https://leetcode.com/problems/design-search-autocomplete-system)) and wildcard search ([211](https://leetcode.com/problems/design-add-and-search-words-data-structure)).
@@ -113,6 +113,38 @@ GM reports from 2025 name only "Minimum Path Sum". The prompts below are the lik
    - Faster search → A* with heuristic Manhattan distance × smallest cell cost.
    - Map doesn't fit in memory → load tiles lazily during the search.
    - Many queries to the same target → one Dijkstra backwards from the target.
+
+## Course Schedule (#7): follow-up prompts to rehearse
+
+[207](https://leetcode.com/problems/course-schedule) and [210](https://leetcode.com/problems/course-schedule-ii) have **no durations**: each course is a node and each prerequisite is an edge. Follow-ups 1–5 keep that model. Only #6 adds hours, and at that point it is a different problem. Every answer below was checked by running it.
+
+1. **Return an order** (210). "Return any order that finishes all courses, or `[]` if that's impossible."
+   - `n=4, [[1,0],[2,0],[3,1],[3,2]]` → `[0,1,2,3]` (or `[0,2,1,3]`).
+   - *Answer:* Kahn's algorithm, O(V+E). See `find_order`.
+2. **Which dependencies block the schedule?** "If it can't be done, return one cycle so the user can fix it."
+   - `n=3, [[1,0],[2,1],[0,2]]` → `[0,1,2,0]`.
+   - *Answer:* Kahn's algorithm only tells you a cycle exists. To return one, run a 3-color DFS and walk parent pointers back from the back edge. See `find_cycle`.
+3. **Minimum number of semesters with unlimited parallelism** ([1136](https://leetcode.com/problems/parallel-courses)). "Any number of courses whose prerequisites are done can run in the same semester. What is the fewest number of semesters? Return -1 if impossible."
+   - `n=3, relations=[[1,3],[2,3]]` → **2**.
+   - A cycle → **-1**.
+   - *Pipeline framing:* There's still only one unit of time per job. The 8-job pipeline (ingest → decode → {eval-set, replay, label} → train → eval → report) needs **6 stages**.
+   - *Answer:* Run BFS level by level. The number of levels equals the longest chain, counted in courses. See `min_stages`.
+4. **At most k courses per semester** ([1494](https://leetcode.com/problems/parallel-courses-ii)).
+   - `n=4, [[2,1],[3,1],[1,4]], k=2` → **3**.
+   - `n=5, [[2,1],[3,1],[4,1],[1,5]], k=2` → **4**.
+   - *Answer:* Greedy is not always optimal. LeetCode caps n at 15, which allows a bitmask DP over the set of finished courses.
+5. **Prerequisite queries** ([1462](https://leetcode.com/problems/course-schedule-iv)). "Answer many queries of the form: is `a` a (direct or indirect) prerequisite of `b`?"
+   - `n=3, [[1,2],[1,0],[2,0]], queries=[[1,0],[1,2]]` → `[true,true]`.
+   - *Answer:* Propagate a reachability bitset along topological order, then each query is O(1).
+   - *Gotcha:* In 1462, `[a,b]` means a comes **before** b, which is the reverse of 207's convention.
+6. **Durations: a different problem** ([2050](https://leetcode.com/problems/parallel-courses-iii)). "Each course takes `time[i]` months and there are unlimited workers. What is the minimum total time?"
+   - *Answer:* The longest path weighted by time: `finish[j] = time[j] + max(finish[dep])` in topological order. See `min_makespan`.
+   - Adding k workers with durations makes it an NP-hard scheduling problem. Say so, then use critical-path-first list scheduling as the heuristic.
+7. **Probing questions:**
+   - Lexicographically smallest order → swap the queue for a min-heap.
+   - Recursion depth limits → use iterative DFS, or just Kahn's algorithm.
+   - The dependency graph changes online → recheck the cycle locally from the new edge.
+   - Edges are given by name rather than id → map names to ids first, and check for unknown names and duplicates.
 
 ## The 1-hour live Codility format
 
