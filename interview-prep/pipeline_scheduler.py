@@ -15,8 +15,11 @@ from collections import deque
 
 
 def build_graph(tasks, deps):
-    degree = {t: 0 for t in tasks}       # how many deps each task is still waiting on
-    neighbor = {t: [] for t in tasks}    # dep -> tasks that depend on it
+    degree = {}      # task -> how many deps it is still waiting on
+    neighbor = {}    # dep -> list of tasks that depend on it
+    for t in tasks:
+        degree[t] = 0
+        neighbor[t] = []
     for task, dep in deps:
         degree[task] += 1
         neighbor[dep].append(task)
@@ -78,8 +81,16 @@ def get_order(tasks, deps):
 # ----------------------------------------------------------------------------
 def critical_path(dur, deps):
     degree, neighbor = build_graph(dur, deps)
-    start = {t: 0 for t in dur}      # earliest start
-    prev = {t: None for t in dur}    # the dep that finished last
+    # start[t]: earliest time t can begin. Everyone starts at 0, and it only goes
+    #           up as we learn when t's deps finish.
+    # prev[t]:  the dep of t that finished last, i.e. the one t actually waited on.
+    #           None means t has no deps (it starts the chain).
+    # finish[t]: start[t] + dur[t], filled in when t is popped.
+    start = {}
+    prev = {}
+    for t in dur:
+        start[t] = 0
+        prev[t] = None
     finish = {}
     q = deque(t for t in dur if degree[t] == 0)
     while q:
@@ -126,7 +137,9 @@ def critical_path(dur, deps):
 # ----------------------------------------------------------------------------
 def get_slack(dur, deps):
     degree, neighbor = build_graph(dur, deps)
-    start = {t: 0 for t in dur}
+    start = {}       # earliest start, same as Part 2
+    for t in dur:
+        start[t] = 0
     order = []
     q = deque(t for t in dur if degree[t] == 0)
     while q:
@@ -145,7 +158,10 @@ def get_slack(dur, deps):
     for node in reversed(order):
         must_finish = min((latest[nei] for nei in neighbor[node]), default=total)
         latest[node] = must_finish - dur[node]
-    return {t: latest[t] - start[t] for t in dur}
+    slack = {}
+    for t in dur:
+        slack[t] = latest[t] - start[t]
+    return slack
 
 
 # ----------------------------------------------------------------------------
