@@ -50,7 +50,18 @@ def num_steps(s: str) -> int:
     return steps + carry
 
 
-# 3. Maximum Sum of 3 Non-Overlapping Subarrays (LC 689)
+# 3. Merge Intervals (LC 56) -- O(n log n) time, O(n) space
+def merge_intervals(intervals: List[List[int]]) -> List[List[int]]:
+    merged: List[List[int]] = []
+    for start, end in sorted(intervals):
+        if merged and start <= merged[-1][1]:
+            merged[-1][1] = max(merged[-1][1], end)
+        else:
+            merged.append([start, end])
+    return merged
+
+
+# 4. Maximum Sum of 3 Non-Overlapping Subarrays (LC 689)
 #    Window sums + best-left / best-right index arrays, sweep the middle window.
 #    Ties resolve to the lexicographically smallest answer. O(n) time, O(n) space.
 def max_sum_of_three_subarrays(nums: List[int], k: int) -> List[int]:
@@ -73,17 +84,6 @@ def max_sum_of_three_subarrays(nums: List[int], k: int) -> List[int]:
         if total > best_total:  # strict: keeps the earliest (lexicographically smallest) j
             best_total, best = total, [a, j, c]
     return best
-
-
-# 4. Merge Intervals (LC 56) -- O(n log n) time, O(n) space
-def merge_intervals(intervals: List[List[int]]) -> List[List[int]]:
-    merged: List[List[int]] = []
-    for start, end in sorted(intervals):
-        if merged and start <= merged[-1][1]:
-            merged[-1][1] = max(merged[-1][1], end)
-        else:
-            merged.append([start, end])
-    return merged
 
 
 # 5a. Minimum Path Sum (LC 64) -- right/down only, 1-D DP, O(mn) time, O(n) space
@@ -171,19 +171,7 @@ class LRUCache:
         self._push_front(node)
 
 
-# 7. Minimum Deletions to Make Character Frequencies Unique (LC 1647)
-#    Greedy: largest counts first, decrement until an unused count (0 is always allowed).
-def min_deletions(s: str) -> int:
-    used, deletions = set(), 0
-    for f in sorted(Counter(s).values(), reverse=True):
-        while f > 0 and f in used:
-            f -= 1
-            deletions += 1
-        used.add(f)
-    return deletions
-
-
-# 8. Course Schedule I / II (LC 207 / 210) -- Kahn's topological sort, O(V + E).
+# 7. Course Schedule I / II (LC 207 / 210) -- Kahn's topological sort, O(V + E).
 #    find_order returns [] when the dependency graph has a cycle.
 def find_order(num_tasks: int, prerequisites: List[List[int]]) -> List[int]:
     graph = defaultdict(list)
@@ -207,7 +195,7 @@ def can_finish(num_tasks: int, prerequisites: List[List[int]]) -> bool:
     return len(find_order(num_tasks, prerequisites)) == num_tasks
 
 
-# 8b. Follow-up (pipeline framing): every task has a duration, unlimited workers ->
+# 7b. Follow-up (pipeline framing): every task has a duration, unlimited workers ->
 #     minimum makespan = longest path in the DAG (LC 2050 Parallel Courses III). O(V + E).
 def min_makespan(durations: List[int], prerequisites: List[List[int]]) -> int:
     order = find_order(len(durations), prerequisites)
@@ -222,7 +210,22 @@ def min_makespan(durations: List[int], prerequisites: List[List[int]]) -> int:
     return max(finish, default=0)
 
 
+# 8. Minimum Deletions to Make Character Frequencies Unique (LC 1647)
+#    Greedy: largest counts first, decrement until an unused count (0 is always allowed).
+def min_deletions(s: str) -> int:
+    used, deletions = set(), 0
+    for f in sorted(Counter(s).values(), reverse=True):
+        while f > 0 and f in used:
+            f -= 1
+            deletions += 1
+        used.add(f)
+    return deletions
+
+
 # 9. Implement Trie (LC 208) -- O(L) per op
+_END = object()  # end-of-word marker that can never collide with a character key
+
+
 class Trie:
     def __init__(self):
         self.root: Dict = {}
@@ -231,7 +234,7 @@ class Trie:
         node = self.root
         for ch in word:
             node = node.setdefault(ch, {})
-        node["$"] = True
+        node[_END] = True
 
     def _walk(self, s: str) -> Optional[Dict]:
         node = self.root
@@ -243,7 +246,7 @@ class Trie:
 
     def search(self, word: str) -> bool:
         node = self._walk(word)
-        return node is not None and "$" in node
+        return node is not None and _END in node
 
     def starts_with(self, prefix: str) -> bool:
         return self._walk(prefix) is not None
@@ -417,7 +420,7 @@ def _run_checks() -> None:
     for n in range(1, 4096):
         assert num_steps(bin(n)[2:]) == _bf_steps(bin(n)[2:])
 
-    # 3
+    # 4
     assert max_sum_of_three_subarrays([1, 2, 1, 2, 6, 7, 5, 1], 2) == [0, 3, 5]
     assert max_sum_of_three_subarrays([1, 2, 1, 2, 1, 2, 1, 2, 1], 2) == [0, 2, 4]
     for _ in range(2000):
@@ -425,7 +428,7 @@ def _run_checks() -> None:
         nums = [rng.randint(1, 4) for _ in range(rng.randint(3 * k, 3 * k + 7))]  # many ties
         assert max_sum_of_three_subarrays(nums, k) == _bf_three(nums, k), (nums, k)
 
-    # 4
+    # 3
     assert merge_intervals([[1, 3], [2, 6], [8, 10], [15, 18]]) == [[1, 6], [8, 10], [15, 18]]
     assert merge_intervals([[1, 4], [4, 5]]) == [[1, 5]]
     assert merge_intervals([[1, 10], [2, 3]]) == [[1, 10]]
@@ -452,13 +455,13 @@ def _run_checks() -> None:
     cache.put(5, 5)  # evicts 4
     assert cache.get(4) == -1 and cache.get(3) == 30
 
-    # 7
+    # 8
     assert min_deletions("aab") == 0 and min_deletions("aaabbbcc") == 2 and min_deletions("ceabaacb") == 2
     for _ in range(2000):
         s = "".join(rng.choice("abcd") for _ in range(rng.randint(1, 12)))
         assert min_deletions(s) == _bf_deletions(s), s
 
-    # 8
+    # 7
     order = find_order(4, [[1, 0], [2, 0], [3, 1], [3, 2]])
     pos = {t: i for i, t in enumerate(order)}
     assert len(order) == 4 and pos[0] < pos[1] < pos[3] and pos[0] < pos[2] < pos[3]
@@ -474,6 +477,8 @@ def _run_checks() -> None:
     assert trie.search("apple") and not trie.search("app") and trie.starts_with("app")
     trie.insert("app")
     assert trie.search("app") and not trie.starts_with("b")
+    trie.insert("a$")  # arbitrary alphabet: '$' must not collide with the end marker
+    assert not trie.search("a") and trie.search("a$") and not trie.search("app$")
 
     # 10
     assert generate_sentences(
