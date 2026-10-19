@@ -4,6 +4,7 @@ Ordered by the frequency x recency ranking from score_questions.py, plus one wil
 Run `python3 gm_top10.py` to execute the self-checks (including brute-force cross-checks).
 """
 
+import bisect
 import heapq
 import itertools
 import random
@@ -59,6 +60,38 @@ def merge_intervals(intervals: List[List[int]]) -> List[List[int]]:
         else:
             merged.append([start, end])
     return merged
+
+
+# 3b. Follow-up: intervals stream in one at a time, out of order (GM AV report).
+#     Keep the merged set as two parallel sorted lists. add() is O(log n) to locate plus
+#     O(n) list splice (memmove); use sortedcontainers.SortedList for O(log n) amortized.
+#     Each stored interval is absorbed at most once, so merging is amortized O(1) per add.
+class StreamingIntervals:
+    def __init__(self):
+        self.starts: List[int] = []  # disjoint closed intervals, sorted (so ends are sorted too)
+        self.ends: List[int] = []
+        self.total_covered = 0  # covered time of everything seen, including flushed intervals
+
+    def add(self, start: int, end: int) -> None:
+        i = bisect.bisect_left(self.ends, start)  # first stored interval with end >= start
+        j = bisect.bisect_right(self.starts, end)  # first stored interval with start > end
+        if i < j:  # stored intervals i..j-1 overlap or touch the new one
+            self.total_covered -= sum(self.ends[k] - self.starts[k] for k in range(i, j))
+            start, end = min(start, self.starts[i]), max(end, self.ends[j - 1])
+        self.starts[i:j] = [start]
+        self.ends[i:j] = [end]
+        self.total_covered += end - start
+
+    def get_intervals(self) -> List[List[int]]:
+        return [[s, e] for s, e in zip(self.starts, self.ends)]
+
+    def flush(self, watermark: int) -> List[List[int]]:
+        """Caller promises no future interval starts before `watermark`: emit and drop the
+        intervals that can no longer change, so memory stays bounded on an endless stream."""
+        k = bisect.bisect_left(self.ends, watermark)  # end < watermark -> final
+        done = [[s, e] for s, e in zip(self.starts[:k], self.ends[:k])]
+        del self.starts[:k], self.ends[:k]
+        return done
 
 
 # 4. Maximum Sum of 3 Non-Overlapping Subarrays (LC 689)
@@ -433,6 +466,24 @@ def _run_checks() -> None:
     assert merge_intervals([[1, 4], [4, 5]]) == [[1, 5]]
     assert merge_intervals([[1, 10], [2, 3]]) == [[1, 10]]
     assert merge_intervals([]) == []
+    stream = StreamingIntervals()
+    for iv in ([8, 10], [1, 3], [15, 18], [2, 6], [6, 8]):  # out of order; [6, 8] bridges two
+        stream.add(*iv)
+    assert stream.get_intervals() == [[1, 10], [15, 18]] and stream.total_covered == 12
+    for _ in range(2000):  # vs. re-merging everything seen so far
+        stream, seen, flushed, watermark = StreamingIntervals(), [], [], 0
+        for _ in range(rng.randint(0, 25)):
+            if rng.random() < 0.15:
+                watermark += rng.randint(0, 6)
+                flushed += stream.flush(watermark)
+                continue
+            a = watermark + rng.randint(0, 30)
+            iv = [a, a + rng.randint(0, 6)]
+            seen.append(iv)
+            stream.add(*iv)
+            merged = merge_intervals([list(x) for x in seen])
+            assert flushed + stream.get_intervals() == merged
+            assert stream.total_covered == sum(e - b for b, e in merged)
 
     # 5
     assert min_path_sum([[1, 3, 1], [1, 5, 1], [4, 2, 1]]) == 7

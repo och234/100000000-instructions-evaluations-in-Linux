@@ -69,7 +69,7 @@ The bullet under each question is the ML-infra follow-up the interviewer is like
 2. **Steps to Reduce Binary to One (1404).** Scan right to left with a carry. An odd bit adds 2 steps and sets carry=1; an even bit adds 1 step. O(n), with no big-int conversion.
    - *Twist:* The string has 10⁶ bits. Explain why `int(s, 2)` with simulation becomes O(n²).
 3. **Merge Intervals (56).** Sort, then sweep.
-   - *Twist:* Intervals arrive as a stream or out of order ([352](https://leetcode.com/problems/data-stream-as-disjoint-intervals), [715](https://leetcode.com/problems/range-module)).
+   - *Twist:* Intervals arrive one at a time and out of order; see `StreamingIntervals`, which adds in O(log n) and lets you flush by watermark. Related: [352](https://leetcode.com/problems/data-stream-as-disjoint-intervals) and [715](https://leetcode.com/problems/range-module).
    - Other follow-ups: [Insert Interval (57)](https://leetcode.com/problems/insert-interval), and the peak number of concurrent jobs ([Meeting Rooms II, 253](https://leetcode.com/problems/meeting-rooms-ii)).
 4. **Max Sum of 3 Non-Overlapping Subarrays (689).** Compute window sums. Build a best-left argmax array (strict `>`) and a best-right argmax array (`>=`) so ties go to the leftmost index. Then sweep the middle window. O(n).
    - *Twist:* Generalize to m windows with an O(n·m) DP.
